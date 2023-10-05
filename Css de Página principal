@@ -23,17 +23,29 @@
     margin-bottom: 8px;
     text-align: center;
 }
-.Imagenes .container .container-fluid .mt-3{
+.Imagenes .container .container-fluid .mt-3 .mb-3 .ml3 .mr3 .img-fluid{
     display: flex;
     justify-content: space-between;
     position: relative;
     z-index: 1; /* Coloca este elemento sobre la imagen de fondo */
+}    
+.texto-agrandable {
+    font-size: 16px; /* Tamaño de fuente normal */
+    transition: transform 0.2s; /* Transición suave */
+}
+
+  /* Estilo CSS para el texto al pasar el cursor */
+.texto-agrandable:hover {
+    transform: scale(1.1); /* Aumentar el tamaño al 110% */
 }
 .container img{
-    margin: 20px;
+    margin-top: 40px;
+    margin-bottom: 40px;
+    margin-left: 120px;
+    margin-right: 130px;
 }
 body{
-    background-image: url(https://img.freepik.com/vector-gratis/fondo-huella-huellas-neumatico-amarillo_1017-30654.jpg?w=900&t=st=1696522227~exp=1696522827~hmac=bd4fa18de48a71f95e3f75244f86bb1608ff6e78350e9bbe1c2f7e032180e66f);
+    background-image: url(https://img.freepik.com/foto-gratis/fondo-azul-degradado-lujo-abstracto-azul-oscuro-liso-banner-estudio-vineta-negra_1258-54047.jpg);
     background-size: cover; /*hace que la imagen se ajuste al texto*/
     background-repeat: no-repeat;/*evita que la imagen de fondo se repita*/
     background-attachment: fixed;/*fija la imagen en su sitio meitnras se desplaza la pagina*/
