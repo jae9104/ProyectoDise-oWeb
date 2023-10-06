@@ -23,32 +23,39 @@
     margin-bottom: 8px;
     text-align: center;
 }
-.Imagenes .container .container-fluid .mt-3 .mb-3 .ml3 .mr3 .img-fluid{
+.Segundo-Fondo{
+    background-image: url(https://img.freepik.com/foto-gratis/fondo-azul-degradado-lujo-abstracto-azul-oscuro-liso-banner-estudio-vineta-negra_1258-54047.jpg);
+    background-size: cover; /*hace que la imagen se ajuste al texto*/
+    background-repeat: no-repeat;/*evita que la imagen de fondo se repita*/
+    background-attachment: fixed;/*fija la imagen en su sitio mientras se desplaza la pagina*/
+    background-position: center center; /* Centra la imagen de fondo */
+    height: 100vh; /* Establece la altura de la página para que ocupe toda la ventana */ 
+    z-index: 1; 
+}
+.Segundo-Fondo .Imagenes .container .container-fluid .mt-3 .mb-3 .ml3 .mr3 .img-fluid{
     display: flex;
     justify-content: space-between;
     position: relative;
-    z-index: 1; /* Coloca este elemento sobre la imagen de fondo */
-}    
+    z-index: 1; /* Coloca este elemento sobre la imagen de fondo*/
+}  
 .texto-agrandable {
     font-size: 16px; /* Tamaño de fuente normal */
     transition: transform 0.2s; /* Transición suave */
 }
-
-  /* Estilo CSS para el texto al pasar el cursor */
 .texto-agrandable:hover {
     transform: scale(1.1); /* Aumentar el tamaño al 110% */
 }
 .container img{
     margin-top: 40px;
     margin-bottom: 40px;
-    margin-left: 120px;
-    margin-right: 130px;
+    margin-left: 110px;
 }
-body{
-    background-image: url(https://img.freepik.com/foto-gratis/fondo-azul-degradado-lujo-abstracto-azul-oscuro-liso-banner-estudio-vineta-negra_1258-54047.jpg);
+.Primer-Fondo{
+    background-image: url(https://img.freepik.com/vector-gratis/fondo-huella-huellas-neumatico-amarillo_1017-30654.jpg?w=1060&t=st=1696583910~exp=1696584510~hmac=191af2a3c7f85558972234efac324bd4c6466a2267db0373c0f0bbd3f722d894);
     background-size: cover; /*hace que la imagen se ajuste al texto*/
     background-repeat: no-repeat;/*evita que la imagen de fondo se repita*/
-    background-attachment: fixed;/*fija la imagen en su sitio meitnras se desplaza la pagina*/
+    background-attachment: fixed;/*fija la imagen en su sitio mientras se desplaza la pagina*/
     background-position: center center; /* Centra la imagen de fondo */
     height: 100vh; /* Establece la altura de la página para que ocupe toda la ventana */
+    z-index: 0;
 }
