@@ -5,10 +5,6 @@
     color: white;
    
 }
-.container-fluid{
-   margin-left: 10px;
-   margin-right: 10px;
-}
 .container {
     display: flex;
     justify-content:space-between;
@@ -24,7 +20,7 @@
     text-align: center;
 }
 .Segundo-Fondo{
-    background-image: url(https://img.freepik.com/foto-gratis/fondo-azul-degradado-lujo-abstracto-azul-oscuro-liso-banner-estudio-vineta-negra_1258-54047.jpg);
+    background-image: url(https://img.freepik.com/foto-gratis/fondo-pantalla-patron-fondo-abstracto-grunge-negro-foto-gratis_1340-33848.jpg);
     background-size: cover; /*hace que la imagen se ajuste al texto*/
     background-repeat: no-repeat;/*evita que la imagen de fondo se repita*/
     background-attachment: fixed;/*fija la imagen en su sitio mientras se desplaza la pagina*/
@@ -43,12 +39,16 @@
     transition: transform 0.2s; /* Transición suave */
 }
 .texto-agrandable:hover {
-    transform: scale(1.1); /* Aumentar el tamaño al 110% */
+    transform: scale(1.2); /* Aumentar el tamaño al 120% */
 }
 .container img{
-    margin-top: 40px;
-    margin-bottom: 40px;
-    margin-left: 110px;
+    margin-top: 50px;
+    margin-bottom: 20px;
+    margin-left: 55px;
+    margin-right: 55px
+}
+.Imagenes{
+    margin-left:125px;
 }
 .Primer-Fondo{
     background-image: url(https://img.freepik.com/vector-gratis/fondo-huella-huellas-neumatico-amarillo_1017-30654.jpg?w=1060&t=st=1696583910~exp=1696584510~hmac=191af2a3c7f85558972234efac324bd4c6466a2267db0373c0f0bbd3f722d894);
@@ -58,4 +58,7 @@
     background-position: center center; /* Centra la imagen de fondo */
     height: 100vh; /* Establece la altura de la página para que ocupe toda la ventana */
     z-index: 0;
+}
+h5{
+    color:white;
 }
