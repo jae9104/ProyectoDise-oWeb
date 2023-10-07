@@ -11,7 +11,7 @@
 
 
 <body>
-    <nav class="navbar navbar-expand-md bg-dark">
+    <nav class="navbar navbar-expand-md bg-dark fixed-top">
         <div class="container-fluid">
             <a class="navbar-brand" href="#"> Nombre página </a>
             <div class="collapse navbar-collapse" id="navbarCollapse">
@@ -25,14 +25,14 @@
                         <a class="nav-link" href="#">Sobre Nosotros </a>
                     </li>
                     <li class="nav-item"></li>
-                    <button class="btn btn-primary" type="button">Iniciar Sesión</button>
+                    <button class="btn btn-primary">Iniciar Sesion</button>
                     </li>
                 </ul>
             </div>
         </div>
     </nav>
-    <div class="Primer-Fondo"></div>
-    <div class="Segundo-Fondo">
+    <div class="Container Primer-Fondo"></div>
+    <div class="Container Segundo-Fondo">
         <div class="Imagenes">
             <div class="container-fluid">
                 <div class="container">
@@ -42,7 +42,7 @@
                                 <img src="https://hips.hearstapps.com/hmg-prod/images/nissan-gtr-2022-japon-portada-1631625941.jpg?crop=1xw:1xh;center,top&resize=1200:*"
                                     height="100px" width="175px" class="texto-agrandable"
                                     class="figure-img img-fluid rounded" alt="Nissan GTR"></a>
-                            <figcaption class="figure-caption text-end" style="text-align: center">
+                            <figcaption class="figure-caption" style="text-align: center">
                                 <h5><strong>Nissan GTR</strong></h5>
                             </figcaption>
                         </figure>
@@ -51,7 +51,7 @@
                                 <img src="https://hips.hearstapps.com/hmg-prod/images/2023-dodge-challenger-black-ghost-5-1663968596.jpg"
                                     class="texto-agrandable" height="100px" width="175px"
                                     class="figure-img img-fluid rounded" alt="Dodge Challenger"></a>
-                            <figcaption class="figure-caption text-end" style="text-align: center">
+                            <figcaption class="figure-caption" style="text-align: center">
                                 <h5><strong>Dodge Challenger</strong></h5>
                             </figcaption>
                         </figure>
@@ -60,7 +60,7 @@
                                 <img src="https://img.remediosdigitales.com/9175d4/1366_2000-2/1366_2000.jpeg"
                                     class="texto-agrandable" height="100px" width="175px"
                                     class="figure-img img-fluid rounded" alt="Ford Mustang"></a>
-                            <figcaption class="figure-caption text-end" style="text-align: center">
+                            <figcaption class="figure-caption" style="text-align: center">
                                 <h5><strong>Ford Mustang</strong></h5>
                             </figcaption>
                         </figure>
@@ -69,7 +69,7 @@
                                 <img src="https://wallpapercave.com/wp/wp10483674.jpg" class="texto-agrandable"
                                     height="100px" width="175px" class="figure-img img-fluid rounded"
                                     alt="Toyota Supra"></a>
-                            <figcaption class="figure-caption text-end" style="text-align: center">
+                            <figcaption class="figure-caption" style="text-align: center">
                                 <h5><strong>Toyota Supra</strong></h5>
                             </figcaption>
                         </figure>
@@ -78,7 +78,7 @@
                                 <img src="https://cdn.topgear.es/sites/navi.axelspringer.es/public/media/image/2023/01/bmw-m3-cs-2937784.jpg?tf=3840x"
                                     class="texto-agrandable" height="100px" width="175px"
                                     class="figure-img img-fluid rounded" alt="BMW M3"></a>
-                            <figcaption class="figure-caption text-end" style="text-align: center">
+                            <figcaption class="figure-caption" style="text-align: center">
                                 <h5><strong>BMW M3</strong></h5>
                             </figcaption>
                         </figure>
@@ -87,7 +87,7 @@
                                 <img src="https://newsroom.porsche.com/.imaging/mte/porsche-templating-theme/teaser_720x406x2/dam/pnr/2022/Motorsports/911-GT3-R-world-premiere/Gallery-3/M22_3539_fine.jpeg/jcr:content/M22_3539_fine.jpeg"
                                     class="texto-agrandable" height="100px" width="175px"
                                     class="figure-img img-fluid rounded" alt="Porsche 911 GT3"></a>
-                            <figcaption class="figure-caption text-end" style="text-align: center">
+                            <figcaption class="figure-caption" style="text-align: center">
                                 <h5><strong>Porsche 911 GT3</strong></h5>
                             </figcaption>
                         </figure>
@@ -96,7 +96,7 @@
                                 <img src="https://i.pinimg.com/originals/6d/b6/80/6db680dd0d0a371d6165c2efda69efaa.jpg"
                                     class="texto-agrandable" height="100px" width="175px"
                                     class="figure-img img-fluid rounded" alt="Chevrolet Camaro"></a>
-                            <figcaption class="figure-caption text-end" style="text-align: center">
+                            <figcaption class="figure-caption" style="text-align: center">
                                 <h5><strong>Chevrolet Camaro</strong></h5>
                             </figcaption>
                         </figure>
@@ -105,7 +105,7 @@
                                 <img src="https://www.sevillawagen.audi.es/content/dam/iph/international/es/general_assets/blueprint/master/models/r8/r8-coupe-v10-performance-quattro/my-2022/stage/stage-audi-r8-coupe-v10-quattro-1400x438.jpg/jcr:content/renditions/cq5dam.thumbnail.720.406.iph.png?imwidth=720&imdensity=1"
                                     class="texto-agrandable" height="100px" width="175px"
                                     class="figure-img img-fluid rounded" alt="Audi R8"></a>
-                            <figcaption class="figure-caption text-end" style="text-align: center">
+                            <figcaption class="figure-caption" style="text-align: center">
                                 <h5><strong>Audi R8</strong></h5>
                             </figcaption>
                         </figure>
@@ -114,7 +114,7 @@
                                 <img src="https://cdn.topgear.es/sites/navi.axelspringer.es/public/media/image/2018/12/mercedes-benz-amg-gt-r-2019.jpg?tf=3840x"
                                     class="texto-agrandable" height="100px" width="175px"
                                     class="figure-img img-fluid rounded" alt="Mercedes AMG GT"></a>
-                            <figcaption class="figure-caption text-end" style="text-align: center">
+                            <figcaption class="figure-caption" style="text-align: center">
                                 <h5><strong>Mercedes AMG GT</strong></h5>
                             </figcaption>
                         </figure>
@@ -123,7 +123,7 @@
                                 <img src="https://cdn.ferrari.com/cms/network/media/img/resize/5de7923a91756c07f10b1720-ferrari-f40-1987-intro-share?width=1080"
                                     class="texto-agrandable" height="100px" width="175px"
                                     class="figure-img img-fluid rounded" alt="Ferrari F40"></a>
-                            <figcaption class="figure-caption text-end" style="text-align: center">
+                            <figcaption class="figure-caption" style="text-align: center">
                                 <h5><strong>Ferrari F40</strong></h5>
                             </figcaption>
                         </figure>
@@ -132,7 +132,7 @@
                                 <img src="https://cdn.motor1.com/images/mgl/PPQe8/s3/lamborghini-urus.webp"
                                     class="texto-agrandable" height="100px" width="175px"
                                     class="figure-img img-fluid rounded" alt="Lamborghini Urus"></a>
-                            <figcaption class="figure-caption text-end" style="text-align: center">
+                            <figcaption class="figure-caption" style="text-align: center">
                                 <h5><strong>Lamborghini Urus</strong></h5>
                             </figcaption>
                         </figure>
@@ -141,7 +141,7 @@
                                 <img src="https://www.diariomotor.com/imagenes/2020/12/pagani-huayra-tricolore-2020-1220-002.jpg"
                                     class="texto-agrandable" height="100px" width="175px"
                                     class="figure-img img-fluid rounded" alt="Pagani Huayra"></a>
-                            <figcaption class="figure-caption text-end" style="text-align: center">
+                            <figcaption class="figure-caption" style="text-align: center">
                                 <h5><strong>Pagani Huayra</strong></h5>
                             </figcaption>
                         </figure>
