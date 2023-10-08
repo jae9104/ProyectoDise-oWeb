@@ -19,16 +19,46 @@
     margin-bottom: 8px;
     text-align: center;
 }
-.Segundo-Fondo{
+.boton{
+    position: fixed;
+    right: 20px;/*hace que se quede a 20px de la derecha de la pagina*/
+}/*Aqui termina la parte de la barra superior*/
+/*Fondo de pantalla de abajo*/
+body{
     background-image: url(https://img.freepik.com/foto-gratis/fondo-pantalla-patron-fondo-abstracto-grunge-negro-foto-gratis_1340-33848.jpg);
     background-size: cover; /*hace que la imagen se ajuste al texto*/
     background-repeat: no-repeat;/*evita que la imagen de fondo se repita*/
     background-attachment: fixed;/*fija la imagen en su sitio mientras se desplaza la pagina*/
     background-position: center center; /* Centra la imagen de fondo */
-    height: 100vh; /* Establece la altura de la página para que ocupe toda la ventana */ 
     z-index: 1; 
+}/*Termina el fondo de pantalla de abajo*/
+/*Primer fondo y enlace para bajar a la parte importante*/
+.Primer-Fondo{
+    background-image: url(https://img.freepik.com/vector-gratis/fondo-huella-huellas-neumatico-amarillo_1017-30654.jpg?w=1060&t=st=1696583910~exp=1696584510~hmac=191af2a3c7f85558972234efac324bd4c6466a2267db0373c0f0bbd3f722d894);
+    background-size: cover; /*hace que la imagen se ajuste al texto*/
+    background-repeat: no-repeat;/*evita que la imagen de fondo se repita*/
+    background-attachment: fixed;/*fija la imagen en su sitio mientras se desplaza la pagina*/
+    background-position: center center; /* Centra la imagen de fondo */
+    height: 100vh; /* Establece la altura de la página para que ocupe toda la ventana */
+    z-index: 2;
 }
-.Segundo-Fondo .Imagenes .container .container-fluid .mt-3 .mb-3 .ml3 .mr3 .img-fluid{
+.overlay {
+    position: relative;
+    width: 100%;
+    height: 100%;
+}
+.overlay a {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0); /* Fondo transparente */
+    text-indent: -9999px; /* Oculta el texto del enlace */
+    z-index: 2; /* Asegura que esté encima de la imagen de fondo */
+}/*fin del primer fondo y enlace para bajar a la parte importante*/
+/*Parte de las imagenes, nombres y pagina de nuevo elemento*/
+.Imagenes .container .container-fluid .mt-3 .mb-3 .ml3 .mr3 .img-fluid{
     display: flex;
     justify-content: space-between;
     position: relative;
@@ -50,15 +80,19 @@
 .Imagenes{
     margin-left:125px;
 }
-.Primer-Fondo{
-    background-image: url(https://img.freepik.com/vector-gratis/fondo-huella-huellas-neumatico-amarillo_1017-30654.jpg?w=1060&t=st=1696583910~exp=1696584510~hmac=191af2a3c7f85558972234efac324bd4c6466a2267db0373c0f0bbd3f722d894);
-    background-size: cover; /*hace que la imagen se ajuste al texto*/
-    background-repeat: no-repeat;/*evita que la imagen de fondo se repita*/
-    background-attachment: fixed;/*fija la imagen en su sitio mientras se desplaza la pagina*/
-    background-position: center center; /* Centra la imagen de fondo */
-    height: 100vh; /* Establece la altura de la página para que ocupe toda la ventana */
-    z-index: 0;
-}
 h5{
     color:white;
 }
+h2{
+    text-align:center;
+    color:red;
+    margin-right:140px;
+    margin-top:80px;
+    margin-bottom:40px;
+}
+.Pag-nuevo-elemento{
+    color:white;
+    margin-left:20px;
+    left:10px;
+    margin-bottom: 80px;
+}/*Termina la parte de las imagenes, nombres y pagina de nuevo elemento*/
