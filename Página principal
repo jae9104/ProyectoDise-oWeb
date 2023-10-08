@@ -24,19 +24,26 @@
                     <li class="nav-item">
                         <a class="nav-link" href="#">Sobre Nosotros </a>
                     </li>
-                    <li class="nav-item"></li>
-                    <button class="btn btn-primary">Iniciar Sesion</button>
-                    </li>
+                    <div class="boton">
+                        <li class="nav-item"></li>
+                        <button class="btn btn-primary">Iniciar Sesion</button>
+                        </li>
+                    </div>
                 </ul>
             </div>
         </div>
     </nav>
-    <div class="Container Primer-Fondo"></div>
-    <div class="Container Segundo-Fondo">
+    <div class="Container Primer-Fondo">
+        <div class="overlay">
+            <a href="#Imagenes"></a>
+        </div>
+    </div>
+    <div class="Container" id="Imagenes">
         <div class="Imagenes">
             <div class="container-fluid">
                 <div class="container">
                     <div class="mt-3 mb-3 ml3 mr3 img-fluid">
+                        <h2><strong>ULTIMOS MODELOS DE LOS MEJORES COCHES</strong></h2>
                         <figure class="figure">
                             <a href="pag secundaria 1.html" target="_blank">
                                 <img src="https://hips.hearstapps.com/hmg-prod/images/nissan-gtr-2022-japon-portada-1631625941.jpg?crop=1xw:1xh;center,top&resize=1200:*"
@@ -149,7 +156,12 @@
                 </div>
             </div>
         </div>
+        <div class="Pag-nuevo-elemento">
+            <h6>Si quieres añadir un nuevo coche rellena el formulario pinchando <a
+                    href="3º pagina.html"><kbd>aqui</kbd></a></h6>
+        </div>
     </div>
+
 
 </body>
 
