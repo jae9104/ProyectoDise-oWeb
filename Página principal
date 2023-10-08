@@ -13,16 +13,16 @@
 <body>
     <nav class="navbar navbar-expand-md bg-dark fixed-top">
         <div class="container-fluid">
-            <a class="navbar-brand" href="#"> Tu GT en casa </a>
+            <a class="navbar-brand"> Tu GT en casa </a>
             <div class="collapse navbar-collapse" id="navbarCollapse">
                 <!-- class=collapse navbar-collapse Permite que la navbar sea responsive -->
                 <ul class="navbar-nav">
                     <!-- href='#'' permite que al clicar en el link te redirija a la parte superior de la página a la que se asocie el link -->
                     <li class="nav-item">
-                        <a class="nav-link" href="#">Menu </a>
+                        <a class="nav-link" href="#">Ir arriba </a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#">Sobre Nosotros </a>
+                        <a class="nav-link" href="3º pagina.html">Te compramos tu coche </a>
                     </li>
                     <div class="boton">
                         <form class="d-flex">
@@ -35,6 +35,10 @@
         </div>
     </nav>
     <div class="Container Primer-Fondo">
+        <div class="text-ini">
+            <h1><strong>BIENVENIDOS</strong></h1>
+            <h1>a nuestra pagina</h1>
+        </div>
         <div class="overlay">
             <a href="#Imagenes"></a>
         </div>
@@ -156,9 +160,6 @@
                     </div>
                 </div>
             </div>
-        </div>
-        <div class="Pag-nuevo-elemento">
-            Si quieres añadir un nuevo coche rellena el formulario pinchando <a href="3º pagina.html">aqui</a>
         </div>
     </div>
 
