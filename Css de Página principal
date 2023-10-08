@@ -41,6 +41,14 @@ body{
     height: 100vh; /* Establece la altura de la página para que ocupe toda la ventana */
     z-index: 2;
 }
+.text-ini{
+    color: white;
+    text-align:center;
+    padding-top: 16.2%;
+}
+h1{
+    font-size: 50px;
+}
 .overlay {
     position: relative;
     width: 100%;
