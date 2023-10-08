@@ -1,0 +1,38 @@
+.nav-link {
+    color: white;
+}
+.navbar-brand{
+    color: white;
+   
+}
+.container {
+    display: flex;
+    justify-content:space-between;
+    flex-wrap: wrap;
+}
+.item {
+    background: grey;
+    min-height: 30px;
+    min-width: 30px;
+    border: 1px solid black;
+    margin-top: 8px;
+    margin-bottom: 8px;
+    text-align: center;
+}
+.boton{
+    position: fixed;
+    right: 20px;
+}
+.Formulario{
+    margin-top: 60px;
+    color: white;
+}
+body{
+    background-image: url(https://img.freepik.com/foto-gratis/fondo-pantalla-patron-fondo-abstracto-grunge-negro-foto-gratis_1340-33848.jpg);
+    background-size: cover; /*hace que la imagen se ajuste al texto*/
+    background-repeat: no-repeat;/*evita que la imagen de fondo se repita*/
+    background-attachment: fixed;/*fija la imagen en su sitio mientras se desplaza la pagina*/
+    background-position: center center; /* Centra la imagen de fondo */
+    height: 100vh; /* Establece la altura de la página para que ocupe toda la ventana */ 
+    z-index: 1;
+}
