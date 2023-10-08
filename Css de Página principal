@@ -3,7 +3,6 @@
 }
 .navbar-brand{
     color: white;
-   
 }
 .container {
     display: flex;
@@ -34,7 +33,7 @@ body{
 }/*Termina el fondo de pantalla de abajo*/
 /*Primer fondo y enlace para bajar a la parte importante*/
 .Primer-Fondo{
-    background-image: url(https://img.freepik.com/vector-gratis/fondo-huella-huellas-neumatico-amarillo_1017-30654.jpg?w=1060&t=st=1696583910~exp=1696584510~hmac=191af2a3c7f85558972234efac324bd4c6466a2267db0373c0f0bbd3f722d894);
+    background-image: url(https://cdn.pixabay.com/photo/2023/07/23/10/14/automobile-8144843_1280.png);
     background-size: cover; /*hace que la imagen se ajuste al texto*/
     background-repeat: no-repeat;/*evita que la imagen de fondo se repita*/
     background-attachment: fixed;/*fija la imagen en su sitio mientras se desplaza la pagina*/
@@ -81,11 +80,11 @@ body{
     margin-left:125px;
 }
 h5{
-    color:white;
+    color: #808000;
 }
 h2{
     text-align:center;
-    color:red;
+    color:#FF0000;
     margin-right:140px;
     margin-top:80px;
     margin-bottom:40px;
@@ -94,5 +93,6 @@ h2{
     color:white;
     margin-left:20px;
     left:10px;
+    margin-top:80px;
     margin-bottom: 80px;
 }/*Termina la parte de las imagenes, nombres y pagina de nuevo elemento*/
