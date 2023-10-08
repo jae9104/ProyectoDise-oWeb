@@ -3,7 +3,6 @@
 }
 .navbar-brand{
     color: white;
-   
 }
 .container {
     display: flex;
@@ -21,11 +20,11 @@
 }
 .boton{
     position: fixed;
-    right: 20px;
+    right: 20px;/*hace que se quede a 20px de la derecha de la pagina*/
 }
 .Formulario{
     margin-top: 60px;
-    color: white;
+    color: #808000;
 }
 body{
     background-image: url(https://img.freepik.com/foto-gratis/fondo-pantalla-patron-fondo-abstracto-grunge-negro-foto-gratis_1340-33848.jpg);
@@ -35,4 +34,15 @@ body{
     background-position: center center; /* Centra la imagen de fondo */
     height: 100vh; /* Establece la altura de la página para que ocupe toda la ventana */ 
     z-index: 1;
+}
+.titulo{
+    text-align: left;
+    margin-left: 13px;
+    margin-bottom: 20px;
+}
+.titulo h2{
+    color:red;
+}
+.titulo a{
+    color:#808000;
 }
