@@ -1,12 +1,87 @@
-.nav-link {
-    color: white;
+/* Estilos para la barra de navegación */
+.navbar {
+    background-color: #343a40; /* Color de fondo de la barra de navegación */
+}
+
+.navbar-brand {
+    color: #fff; /* Color del texto del logo */
+}
+
+.navbar-nav .nav-link {
+    color: #fff; /* Color del texto de los enlaces en la barra de navegación */
+}
+
+/* Estilos para la imagen principal */
+#contenedorPrincipal {
+    
+   
+    margin-top: 20px; /* Margen superior para el contenedor principal */
+}
+
+#textoPrincipal{
+    margin-right: 100px;
+    text-align: justify;
+    margin-top: 25px;
 
 }
-.navbar-brand{
-    color: white;
-    
+.item {
+    background: grey;
+    min-height: 30px;
+    min-width: 30px;
+    border: 1px solid black;
+    margin-top: 8px;
+    margin-bottom: 8px;
+    text-align: center;
 }
-.container-fluid{
-   margin-left: 10px;
-   margin-right: 10px;
+/* Estilos para el título y el texto del contenido principal */
+h1 {
+    font-size: 45px; /* Tamaño de fuente del título */
+    color: white; /* Color del texto del título */
 }
+
+h3 {
+    font-size: 30px; /* Tamaño de fuente del subtítulo */
+    color: white; /* Color del texto del subtítulo */
+}
+h4 {
+    font-size: 25px; /* Tamaño de fuente del subtítulo */
+    color: white; /* Color del texto del subtítulo */
+}
+
+p {
+    font-size: 18px; /* Tamaño de fuente del texto principal */
+    color: white; /* Color del texto principal */
+}
+
+/* Estilos para el formulario de opinión */
+form {
+    margin-top: 20px; /* Margen superior para el formulario */
+}
+
+.form-group label {
+    font-weight: bold; /* Hacer el texto de las etiquetas en negrita */
+    color: #808000; /* Color del texto de las etiquetas */
+}
+
+.form-control {
+    width: 100%; /* Ancho completo para los campos de entrada de texto */
+}
+
+.btn-primary {
+    color: white; /* Color del texto del botón de envío */
+}
+.boton{
+    position: fixed;
+    top: -12px;
+    right: 20px;/*hace que se quede a 20px de la derecha de la pagina*/
+}/*Aqui termina la parte de la barra superior*/
+/*Fondo de pantalla de abajo*/
+
+body{
+    background-image: url(https://img.freepik.com/foto-gratis/fondo-pantalla-patron-fondo-abstracto-grunge-negro-foto-gratis_1340-33848.jpg);
+    background-size: cover; /*hace que la imagen se ajuste al texto*/
+    background-repeat: no-repeat;/*evita que la imagen de fondo se repita*/
+    background-attachment: fixed;/*fija la imagen en su sitio mientras se desplaza la pagina*/
+    background-position: center center; /* Centra la imagen de fondo */
+    z-index: 1; 
+}/*Termina el fondo de pantalla de abajo*/
