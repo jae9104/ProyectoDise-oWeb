@@ -59,3 +59,7 @@ a:hover{
     margin-right: 20%;
     position: center center; /*Centra el texto*/
 }
+.input-ampliado {
+    height: 40px;
+    width: 190px;
+}
