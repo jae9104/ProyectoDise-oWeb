@@ -4,19 +4,8 @@
 .navbar-brand{
     color: white;
 }
-.container {
-    display: flex;
-    justify-content:space-between;
-    flex-wrap: wrap;
-}
-.navbar-nav .nav-link{
-    color: white;/*color cuando no tiene el cursor encima ni cuando esta pulsado*/
-}
-.navbar .nav-link:hover{
-    color: white;/*color cuando tiene el cursor encima*/
-}
-.navbar .nav-item.active .nav-link{
-    color: white;/*color cuando le pulsas*/
+.navbar-nav .nav-link {
+    color: #fff; /* Color del texto de los enlaces en la barra de navegación */
 }
 .item {
     background: grey;
@@ -40,7 +29,7 @@ body{
     background-position: center center; /* Centra la imagen de fondo */
     z-index: 1; 
 }/*Termina el fondo de pantalla de abajo*/
-/*Primer fondo y enlace para bajar a la parte importante*/
+/*Primer fondo, texto bienvenido y enlace para bajar a la parte importante*/
 .Primer-Fondo{
     background-image: url(https://cdn.pixabay.com/photo/2023/07/23/10/14/automobile-8144843_1280.png);
     background-size: cover; /*hace que la imagen se ajuste al texto*/
@@ -108,13 +97,4 @@ h2{
     margin-right:140px;
     margin-top:80px;
     margin-bottom:40px;
-}
-.Pag-nuevo-elemento{
-    color:white;
-    margin-left:20px;
-    left:10px;
-    margin-top:80px;
-    margin-bottom: 80px;
 }/*Termina la parte de las imagenes, nombres y pagina de nuevo elemento*/
-/*https://pixabay.com/es/images/search/coche/ imagenes de coche con fondo trasparente*/
-/*que no se vuelva negro lo navbar cuando lo pulsas*/
