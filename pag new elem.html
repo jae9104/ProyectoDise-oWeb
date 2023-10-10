@@ -30,9 +30,10 @@
             <div class="row">
                 <div class="col-md-6">
                     <div class="texto2">
-                        <h1 style="margin-bottom: 30px">Te aseguramos la <strong>venta</strong> de coche</h1>
-                        <h2 style="margin-bottom: 30px">Solo rellena el siguiente formulario y dejanoslo en nuestras manos</h2>
-                        <h3>Sin preocupaciones ni tiempo, todo cuando tu quieras</h3>
+                        <h1 style="margin-bottom: 30px">Te aseguramos la <strong>venta</strong> de tu coche</h1>
+                        <h2 style="margin-bottom: 30px">Solo rellena el siguiente formulario y dejanoslo en nuestras
+                            manos</h2>
+                        <h3>Sin preocupaciones ni perdida de tiempo, todo cuando y como quieras</h3>
                     </div>
                 </div>
                 <div class="col-md-6">
@@ -42,27 +43,53 @@
                             <h6>Rellena el siguiente formulario y te garantizamos la venta de tu hermoso coche </h6>
                         </div>
                         <div class="container-fluid">
-                            <form>
-                                <div class="mb-3">
+                            <form class="row g-3">
+                                <div class="col-md-12">
                                     <label for="formGroupExampleInput" class="form-label">Marca y modelo del
                                         coche</label>
                                     <input type="text" class="form-control" id="formGroupExampleInput"
                                         placeholder="Ejemplo: Nissan GTR">
                                 </div>
-                                <div class="mb-3">
+                                <div class="col-12">
                                     <label for="formGroupExampleInput" class="form-label">Dirección de la imagen</label>
                                     <input type="text" class="form-control" id="formGroupExampleInput"
                                         placeholder="ejemplo.jpg  ejemplo.png  ejemplo.svg  etc">
                                 </div>
-                                <div class="mb-3">
-                                    <label for="exampleFormControlTextarea1" class="form-label">Caracteristicas
-                                        principales</label>
-                                    <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"
-                                        placeholder="Si tienes dudas de que poner hecha un vistazo a los otros coches de nuestra pagina web"></textarea>
+                                <div class="col-md-4">
+                                    <label for="inputState" class="form-label">Mano</label>
+                                    <select id="inputState" class="form-select">
+                                        <option selected>1º mano</option>
+                                        <option>2º mano</option>
+                                        <option>3º mano</option>
+                                        <option>4º mano o mas</option>
+                                    </select>
                                 </div>
-                                <button type="submit" class="btn btn-primary">Guardar</button>
-                                <button type="submit" class="btn btn-primary segundo"><a
-                                        href="pag principal.html">Cancelar</a></button>
+                                <div class="col-md-4">
+                                    <label for="inputState" class="form-label">Kilometros</label>
+                                    <select id="inputState" class="form-select">
+                                        <option selected>0-10k</option>
+                                        <option>10k-20k</option>
+                                        <option>20k-50k</option>
+                                        <option>50k-100k</option>
+                                        <option>100k-200k</option>
+                                        <option>200k o mas</option>
+                                    </select>
+                                </div>
+                                <div class="col-md-4">
+                                    <label for="cantidad" style="margin-bottom: 7px">Año de matriculacion</label>
+                                    <input type="number" id="cantidad" name="cantidad" min="1990" step="1" max="2023" class="input-ampliado">
+                                </div>
+                                <div class="col-md-12">
+                                    <label for="floatingTextarea2" style="margin-bottom: 7px">Descripcion y/o defectos</label>
+                                    <textarea class="form-control" id="floatingTextarea2" style="height: 100px"></textarea>
+                                </div>
+                                <div class="col-md-2">
+                                    <button type="submit" class="btn btn-primary">Guardar</button>
+                                </div>
+                                <div class="col-md-2">
+                                    <button type="submit" class="btn btn-primary segundo"><a
+                                            href="pag principal.html">Cancelar</a></button>
+                                </div>
                             </form>
                         </div>
                     </div>
