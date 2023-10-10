@@ -1,0 +1,72 @@
+.nav-link {
+    color: white;
+}
+.navbar-brand{
+    color: white;
+}
+.container {
+    display: flex;
+    justify-content:space-between;
+    flex-wrap: wrap;
+}
+.item {
+    background: grey;
+    min-height: 30px;
+    min-width: 30px;
+    border: 1px solid black;
+    margin-top: 8px;
+    margin-bottom: 8px;
+    text-align: center;
+}
+.navbar-nav .nav-link{
+    color: white;/*color cuando no tiene el cursor encima ni cuando esta pulsado*/
+}
+.navbar .nav-link:hover{
+    color: white;/*color cuando tiene el cursor encima*/
+}
+.navbar .nav-item.active .nav-link{
+    color: white;/*color cuando le pulsas*/
+}
+.Formulario{
+    margin-top: 17%;
+    color: #808000;
+}
+body{
+    background-image: url(https://img.freepik.com/foto-gratis/fondo-pantalla-patron-fondo-abstracto-grunge-negro-foto-gratis_1340-33848.jpg);
+    background-size: cover; /*hace que la imagen se ajuste al texto*/
+    background-repeat: no-repeat;/*evita que la imagen de fondo se repita*/
+    background-attachment: fixed;/*fija la imagen en su sitio mientras se desplaza la pagina*/
+    background-position: center center; /* Centra la imagen de fondo */
+    height: 100vh; /* Establece la altura de la página para que ocupe toda la ventana */ 
+    z-index: 1;
+}
+.texto{
+    font-size: 80%;
+}
+.titulo{
+    text-align: left;
+    margin-left: 13px;
+    margin-bottom: 20px;
+}
+.titulo h3{
+    color:white;
+}
+.titulo h6{
+    color:#808000;
+}
+a{
+    color:white;
+    text-decoration: none;
+}
+a:hover{
+    color:white;
+}
+.btn .btn-primary{
+    margin-bottom:20px;
+}
+.texto2{
+    color: white;
+    margin-top: 24%;
+    margin-right: 20%;
+    position: center center; /*Centra el texto*/
+}

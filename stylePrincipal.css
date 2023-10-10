@@ -1,0 +1,120 @@
+.nav-link {
+    color: white;
+}
+.navbar-brand{
+    color: white;
+}
+.container {
+    display: flex;
+    justify-content:space-between;
+    flex-wrap: wrap;
+}
+.navbar-nav .nav-link{
+    color: white;/*color cuando no tiene el cursor encima ni cuando esta pulsado*/
+}
+.navbar .nav-link:hover{
+    color: white;/*color cuando tiene el cursor encima*/
+}
+.navbar .nav-item.active .nav-link{
+    color: white;/*color cuando le pulsas*/
+}
+.item {
+    background: grey;
+    min-height: 30px;
+    min-width: 30px;
+    border: 1px solid black;
+    margin-top: 8px;
+    margin-bottom: 8px;
+    text-align: center;
+}
+.boton{
+    position: fixed;
+    right: 20px;/*hace que se quede a 20px de la derecha de la pagina*/
+}/*Aqui termina la parte de la barra superior*/
+/*Fondo de pantalla de abajo*/
+body{
+    background-image: url(https://img.freepik.com/foto-gratis/fondo-pantalla-patron-fondo-abstracto-grunge-negro-foto-gratis_1340-33848.jpg);
+    background-size: cover; /*hace que la imagen se ajuste al texto*/
+    background-repeat: no-repeat;/*evita que la imagen de fondo se repita*/
+    background-attachment: fixed;/*fija la imagen en su sitio mientras se desplaza la pagina*/
+    background-position: center center; /* Centra la imagen de fondo */
+    z-index: 1; 
+}/*Termina el fondo de pantalla de abajo*/
+/*Primer fondo y enlace para bajar a la parte importante*/
+.Primer-Fondo{
+    background-image: url(https://cdn.pixabay.com/photo/2023/07/23/10/14/automobile-8144843_1280.png);
+    background-size: cover; /*hace que la imagen se ajuste al texto*/
+    background-repeat: no-repeat;/*evita que la imagen de fondo se repita*/
+    background-attachment: fixed;/*fija la imagen en su sitio mientras se desplaza la pagina*/
+    background-position: center center; /* Centra la imagen de fondo */
+    height: 100vh; /* Establece la altura de la página para que ocupe toda la ventana */
+    z-index: 2;
+}
+.text-ini{
+    color: white;
+    text-align:center;
+    padding-top: 16.2%;
+}
+h1{
+    font-size: 90px;
+}
+h3{
+    font-size: 40px;
+}
+.overlay {
+    position: relative;
+    width: 100%;
+    height: 100%;
+}
+.overlay a {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0); /* Fondo transparente */
+    text-indent: -9999px; /* Oculta el texto del enlace */
+    z-index: 3; 
+}/*fin del primer fondo y enlace para bajar a la parte importante*/
+/*Parte de las imagenes, nombres y pagina de nuevo elemento*/
+.Imagenes .container .container-fluid .mt-3 .mb-3 .ml3 .mr3 .img-fluid{
+    display: flex;
+    justify-content: space-between;
+    position: relative;
+    z-index: 1; /* Coloca este elemento sobre la imagen de fondo*/
+}  
+.texto-agrandable {
+    font-size: 16px; /* Tamaño de fuente normal */
+    transition: transform 0.2s; /* Transición suave */
+}
+.texto-agrandable:hover {
+    transform: scale(1.2); /* Aumentar el tamaño al 120% */
+}
+.container img{
+    margin-top: 50px;
+    margin-bottom: 20px;
+    margin-left: 55px;
+    margin-right: 55px
+}
+.Imagenes{
+    margin-left:125px;
+}
+h5{
+    color: #808000;
+}
+h2{
+    text-align:center;
+    color:white;
+    margin-right:140px;
+    margin-top:80px;
+    margin-bottom:40px;
+}
+.Pag-nuevo-elemento{
+    color:white;
+    margin-left:20px;
+    left:10px;
+    margin-top:80px;
+    margin-bottom: 80px;
+}/*Termina la parte de las imagenes, nombres y pagina de nuevo elemento*/
+/*https://pixabay.com/es/images/search/coche/ imagenes de coche con fondo trasparente*/
+/*que no se vuelva negro lo navbar cuando lo pulsas*/
