@@ -4,11 +4,6 @@
 .navbar-brand{
     color: white;
 }
-.container {
-    display: flex;
-    justify-content:space-between;
-    flex-wrap: wrap;
-}
 .item {
     background: grey;
     min-height: 30px;
@@ -18,14 +13,8 @@
     margin-bottom: 8px;
     text-align: center;
 }
-.navbar-nav .nav-link{
-    color: white;/*color cuando no tiene el cursor encima ni cuando esta pulsado*/
-}
-.navbar .nav-link:hover{
-    color: white;/*color cuando tiene el cursor encima*/
-}
-.navbar .nav-item.active .nav-link{
-    color: white;/*color cuando le pulsas*/
+.navbar-nav .nav-link {
+    color: #fff; /* Color del texto de los enlaces en la barra de navegación */
 }
 .Formulario{
     margin-top: 17%;
