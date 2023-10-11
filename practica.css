@@ -13,13 +13,11 @@
 
 /* Estilos para la imagen principal */
 #contenedorPrincipal {
-    
-   
-    margin-top: 20px; /* Margen superior para el contenedor principal */
+
+    margin-top: 75px; /* Margen superior para el contenedor principal */
 }
 
 #textoPrincipal{
-    margin-right: 100px;
     text-align: justify;
     margin-top: 25px;
 
@@ -53,29 +51,16 @@ p {
     color: white; /* Color del texto principal */
 }
 
-/* Estilos para el formulario de opinión */
-form {
-    margin-top: 20px; /* Margen superior para el formulario */
+.Formulario{
+    color: #808000;
+    margin-left: 5%;
+    
 }
 
-.form-group label {
-    font-weight: bold; /* Hacer el texto de las etiquetas en negrita */
-    color: #808000; /* Color del texto de las etiquetas */
+label{
+    margin-top: 10px;
+    margin-bottom: 5px;
 }
-
-.form-control {
-    width: 100%; /* Ancho completo para los campos de entrada de texto */
-}
-
-.btn-primary {
-    color: white; /* Color del texto del botón de envío */
-}
-.boton{
-    position: fixed;
-    top: -12px;
-    right: 20px;/*hace que se quede a 20px de la derecha de la pagina*/
-}/*Aqui termina la parte de la barra superior*/
-/*Fondo de pantalla de abajo*/
 
 body{
     background-image: url(https://img.freepik.com/foto-gratis/fondo-pantalla-patron-fondo-abstracto-grunge-negro-foto-gratis_1340-33848.jpg);
@@ -85,3 +70,14 @@ body{
     background-position: center center; /* Centra la imagen de fondo */
     z-index: 1; 
 }/*Termina el fondo de pantalla de abajo*/
+
+#boton{
+    margin-top: 20px;
+    margin-right: 10px;
+
+
+}
+
+.navbar-brand:hover {
+    color: white; /* Mantiene el mismo color o establece el que desees */
+}
