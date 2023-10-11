@@ -11,10 +11,10 @@
 
 <body>
 
-    <nav class="navbar navbar-expand-md bg-dark ">
+    <nav class="navbar navbar-expand-md bg-dark fixed-top">
         <div class="container-fluid">
-            <a class="navbar-brand" href="#"> TU GT EN CASA </a>
-            <div class="collapse navbar-collapse" id="navbarCollapse">      
+            <a class="navbar-brand"> TU GT EN CASA </a>
+            <div class="collapse navbar-collapse" id="navbarCollapse">
                 <!-- class=collapse navbar-collapse Permite que la navbar sea responsive -->
                 <ul class="navbar-nav">
                     <!-- href='#'' permite que al clicar en el link te redirija a la parte superior de la página a la que se asocie el link -->
@@ -24,50 +24,87 @@
                     <li class="nav-item">
                         <a class="nav-link" href="pag new elem.html">TE COMPRAMOS TU COCHE </a>
                     </li>
-                    <div class="boton ">
-                        <form class="d-flex">
-                            <input class="form-control me-2" type="search" placeholder="Search" aria-label="Buscar">
-                            <button class="btn btn-outline-success" type="submit">Buscar</button>
-                        </form>
-                    </div>
                 </ul>
             </div>
         </div>
     </nav>
 
+    <br>
+
     <div class="container-fluid" id="contenedorPrincipal">
-        <div class="row justify-content-center" style="margin-top: 10px";>
-            <div class="col-6 order-first text-center" >
-                <img class="img-responsive" src="https://cdn.motor1.com/images/mgl/1ZpX7w/s3/2024-nissan-gt-r-nismo-special-edition.jpg" width="750"> 
+        <div class="row justify-content-center" style="margin-top: 10px" ;>
+            <div class="col-sm-6">
+                <div class="container-fluid">
+                    <div class="row justify-content-center">
+                        <div class="col-sm-1"></div>
+                        <div class="col-sm-10">
+                            <h1>Nissan GT-R 2024</h1>
+                            <h3>El coche de ensueño</h3>
+                            <p id="textoPrincipal">a modificar a modificar a modificar a modificar a modificar a
+                                modificar a modificar a modificar a modificar a modificar a modificar a modificar a
+                                modificar a modificar a modificar a modificar a modificar a modificar a modificar a
+                                modificar a modificar a modificar a modificar a modificar a modificar a modificar a
+                                modificar a modificar a modificar a modificar a modificar a modificar a modificar a
+                                modificar a modificar a modificar a modificar a modificar a modificar a modificar a
+                                modificar a modificar a modificar a modificar a modificar a modificar a modificar a
+                                modificar a modificar a modificar a modificar a modificar a modificar a modificar a
+                                modificar a modificar a modificar a modificar a modificar a modificar a modificar a
+                                modificar a modificar a modificar a modificar a modificar </p>
+
+                            <button type="submit" class="btn btn-secondary" id="boton">Editar</button>
+                            <button type="submit" class="btn btn-danger" id="boton">Borrar</button>
+
+                        </div>
+                        <div class="col-sm-1"></div>
+                    </div>
+                </div>
             </div>
-            <div class="col-lg-6 order-last">
-                <h1>Nissan GT-R 2024</h1>
-                <h3>El coche de ensueño</h3>
-                <p id="textoPrincipal">El Nissan GT-R, también conocido como "Godzilla", es un icónico deportivo con un motor biturbo de V6 que cuenta con más de 550 caballos de fuerza ofreciendo una emocionante aceleración. Su tecnología de tracción integral y sistema de control dinámico garantizan un manejo estable y suave incluso en las curvas más desafiantes. En su lujosa cabina, disfrutarás de comodidad y conectividad. El GT-R es la elección perfecta si buscas potencia, agilidad y emoción en un automóvil deportivo.</p>
+            <div class="col-sm-6">
+                <img class="img-fluid" style="width: 80%;"
+                    src="https://cdn.motor1.com/images/mgl/1ZpX7w/s3/2024-nissan-gt-r-nismo-special-edition.jpg">
             </div>
         </div>
-
+    </div>
     <br>
     <br>
     <br>
 
-    <div class="container-fluid"> 
-        <h4> ¿Quieres dejar tu opinión sobre el producto? </h4>
-        <form role="form">
-             <div class="form-group">
-                <label for="email">Email </label>
-             <input type="email" class="form-control" id="email" placeholder="Introduce un email">
+    <div class="container-fluid">
+        <div class="row">
+            <div class="Formulario">
+                <div class="titulo">
+                    <h4> ¿Quieres dejar tu opinión sobre el producto? </h4>
+                </div>
+                <div class="container-fluid">
+                    <form class="row">
+                        <div class="col-md-8">
+                            <label for="email"> Email </label>
+                            <input type="email" class="form-control" id="email" placeholder="Introduce un email">
+                        </div>
+                        <div class="col-md-2">
+                            <label for="cantidad">Valoración</label>
+                            <input type="number" id="cantidad" name="cantidad" min="0" step="1" max="10"
+                                class="form-control">
+                        </div>
+
+                        <div class="col-md-10">
+                            <label for="comment"> Comentario </label>
+                            <textarea class="form-control" placeholder="Introduce tu comentario"
+                                id="floatingTextarea2"></textarea>
+                        </div>
+                        <div class="col-md-2"></div>
+                        <div class="col-md-2">
+                            <button type="submit" class="btn btn-success" style="margin-top: 20px">Publicar</button>
+                        </div>
+                    </form>
+                </div>
             </div>
-         
-            <div class="form-group">
-                <label for="comment"> Comentario </label>
-                <textarea class="form-control" placeholder="Introduce tu comentario" id="floatingTextarea2"></textarea>           
-            </div>
-            <br>
-            <button type="submit" class="btn btn-primary">Guardar </button>
-        </form>
+        </div>
     </div>
 
 
+
+
 </body>
+
 </html>
