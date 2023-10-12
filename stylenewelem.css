@@ -1,10 +1,11 @@
+/*Aqui empieza la parte de la barra superior*/
 .nav-link {
     color: white;
 }
 .navbar-brand{
     color: white;
 }
-.item {
+.item {/*Edita toda la barra superior de la pagina*/
     background: grey;
     min-height: 30px;
     min-width: 30px;
@@ -14,12 +15,13 @@
     text-align: center;
 }
 .navbar-nav .nav-link {
-    color: #fff; /* Color del texto de los enlaces en la barra de navegación */
+    color: white; /* Color del texto de los enlaces en la barra de navegación */
 }
-.Formulario{
-    margin-top: 17%;
-    color: #808000;
-}
+.navbar-brand:hover {
+    color: white; /* Color del texto de los enlaces en la barra de navegación */
+}/*Aqui termina la parte de la barra superior*/
+
+/*Aqui empieza el fondo de pantalla*/
 body{
     background-image: url(https://img.freepik.com/foto-gratis/fondo-pantalla-patron-fondo-abstracto-grunge-negro-foto-gratis_1340-33848.jpg);
     background-size: cover; /*hace que la imagen se ajuste al texto*/
@@ -27,39 +29,36 @@ body{
     background-attachment: fixed;/*fija la imagen en su sitio mientras se desplaza la pagina*/
     background-position: center center; /* Centra la imagen de fondo */
     height: 100vh; /* Establece la altura de la página para que ocupe toda la ventana */ 
-    z-index: 1;
-}
-.texto{
-    font-size: 80%;
-}
-.titulo{
-    text-align: left;
-    margin-left: 13px;
-    margin-bottom: 20px;
-}
-.titulo h3{
-    color:white;
-}
-.titulo h6{
-    color:#808000;
-}
-a{
-    color:white;
-    text-decoration: none;
-}
-a:hover{
-    color:white;
-}
-.btn .btn-primary{
-    margin-bottom:20px;
-}
+}/*Aqui termina el fondo de pantalla*/
+
+/*Aqui empieza la columna de la izquierda (mitad izquierda) de la pantalla*/
 .texto2{
     color: white;
     margin-top: 24%;
     margin-right: 20%;
     position: center center; /*Centra el texto*/
+}/*Aqui termina la columna de la izquierda (mitad izquierda) de la pantalla*/
+
+/*Aqui empieza la columna de la derecha (mitad derecha) de la pantalla*/
+.titulo{/*el titulo se coloca a la izquierda y con margenes en la derecha y abajo*/
+    text-align: left;
+    margin-left: 13px;
+    margin-bottom: 20px;
 }
-.input-ampliado {
-    height: 40px;
-    width: 190px;
+.titulo h3{/*primer texto blanco*/
+    color:white;
 }
+.titulo h6{/*segundo texto color aceituna*/
+    color:#808000;
+}
+.Formulario{/*que el formulario tenga margen arriba y que las palabras sean de color aceitunas*/
+    margin-top: 17%;
+    color: #808000;
+}
+a{/*texto de los botones*/
+    color:white;
+    text-decoration: none;/*hace que no se subraye los botones si tienen un link*/
+}
+a:hover{/*texto del link cuando pasas el cursor por encima*/
+    color:white;
+}/*Aqui termina la columna de la derecha (mitad derecha) de la pantalla*/
