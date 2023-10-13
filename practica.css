@@ -11,18 +11,11 @@
     color: #fff; /* Color del texto de los enlaces en la barra de navegación */
 }
 
-/* Estilos para la imagen principal */
-#contenedorPrincipal {
-
-    margin-top: 75px; /* Margen superior para el contenedor principal */
+.navbar-brand:hover {
+    color: white;   /* Cambio de color al pasar el ratón por encima */
 }
 
-#textoPrincipal{
-    text-align: justify;
-    margin-top: 25px;
-
-}
-.item {
+.item {/*Edita toda la barra superior de la pagina*/
     background: grey;
     min-height: 30px;
     min-width: 30px;
@@ -31,6 +24,27 @@
     margin-bottom: 8px;
     text-align: center;
 }
+
+/* Estilos contenedor principal */
+
+#contenedorPrincipal {
+    margin-top: 75px; /* Margen superior para el contenedor principal */
+}
+
+#textoPrincipal{
+    text-align: justify; /* Justificado todos los margenes a la misma altura del texto */
+    margin-top: 25px;
+}
+
+.table  {
+    font-size: 15px; /* Reduce el tamaño de fuente de la tabla*/
+}
+
+#boton{
+    margin-top: 20px; /* Margen superior para el boton */
+    margin-right: 10px; /* Margen derecho para el boton */
+}
+
 /* Estilos para el título y el texto del contenido principal */
 h1 {
     font-size: 45px; /* Tamaño de fuente del título */
@@ -51,33 +65,26 @@ p {
     color: white; /* Color del texto principal */
 }
 
+/* Estilos para el formulario */
+
 .Formulario{
     color: #808000;
-    margin-left: 5%;
-    
+    padding: 5%;  
 }
 
 label{
-    margin-top: 10px;
+    margin-top: 10px;   /* Añade margenes a las etiquetas */
     margin-bottom: 5px;
 }
+
+/* Estilos para el fondo*/
 
 body{
     background-image: url(https://img.freepik.com/foto-gratis/fondo-pantalla-patron-fondo-abstracto-grunge-negro-foto-gratis_1340-33848.jpg);
     background-size: cover; /*hace que la imagen se ajuste al texto*/
     background-repeat: no-repeat;/*evita que la imagen de fondo se repita*/
     background-attachment: fixed;/*fija la imagen en su sitio mientras se desplaza la pagina*/
-    background-position: center center; /* Centra la imagen de fondo */
-    z-index: 1; 
-}/*Termina el fondo de pantalla de abajo*/
-
-#boton{
-    margin-top: 20px;
-    margin-right: 10px;
-
-
+    background-position: center; /* Centra la imagen de fondo */
+   
 }
 
-.navbar-brand:hover {
-    color: white; /* Mantiene el mismo color o establece el que desees */
-}
