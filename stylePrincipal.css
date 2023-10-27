@@ -27,7 +27,7 @@
 
 /*Fondo de pantalla de abajo*/
 body{
-    background-image: url(https://img.freepik.com/foto-gratis/fondo-pantalla-patron-fondo-abstracto-grunge-negro-foto-gratis_1340-33848.jpg);
+    background-image: url(fondo1.avif);
     background-size: cover; /*hace que la imagen se ajuste al texto*/
     background-repeat: no-repeat;/*evita que la imagen de fondo se repita*/
     background-attachment: fixed;/*fija la imagen en su sitio mientras se desplaza la pagina*/
@@ -37,7 +37,7 @@ body{
 
 /*Primer fondo, texto bienvenido y enlace para bajar a la parte importante*/
 .Primer-Fondo{
-    background-image: url(https://cdn.pixabay.com/photo/2023/07/23/10/14/automobile-8144843_1280.png);
+    background-image: url(fondo2.png);
     background-size: cover; /*hace que la imagen se ajuste al texto*/
     background-repeat: no-repeat;/*evita que la imagen de fondo se repita*/
     background-attachment: fixed;/*fija la imagen en su sitio mientras se desplaza la pagina*/
@@ -84,7 +84,7 @@ h3{
     transition: transform 0.2s; /* cuanto tarda en hacer la transicion */
 }
 .texto-agrandable:hover {
-    transform: scale(1.2); /* Aumentar el tamaño al pasar el cursor por encima al 120% */
+    transform: scale(1.4); /* Aumentar el tamaño al pasar el cursor por encima al 120% */
 }
 .container img{/*espacios entre todas las imagenes en top, bottom, left y right*/
     margin-top: 50px;
