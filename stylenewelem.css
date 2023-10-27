@@ -23,7 +23,7 @@
 
 /*Aqui empieza el fondo de pantalla*/
 body{
-    background-image: url(https://img.freepik.com/foto-gratis/fondo-pantalla-patron-fondo-abstracto-grunge-negro-foto-gratis_1340-33848.jpg);
+    background-image: url(fondo1.avif);
     background-size: cover; /*hace que la imagen se ajuste al texto*/
     background-repeat: no-repeat;/*evita que la imagen de fondo se repita*/
     background-attachment: fixed;/*fija la imagen en su sitio mientras se desplaza la pagina*/
