@@ -55,6 +55,12 @@ body{
     margin-top: 17%;
     color: #808000;
 }
+input:invalid:required, textarea:invalid:required, select:invalid:required {/*Para que sallga en rojo si no has completado ese campo*/
+    border: 2px solid red;
+}
+input:valid, textarea:valid, select:valid {/*Para que salga en azul cuando si has completado ese campo*/
+    border: 2px solid blue;
+  }
 a{/*texto de los botones*/
     color:white;
     text-decoration: none;/*hace que no se subraye los botones si tienen un link*/
