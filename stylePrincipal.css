@@ -20,7 +20,7 @@
     margin-bottom: 8px;
     text-align: center;
 }
-.boton{
+.buscar{
     position: fixed;
     right: 20px;/*hace que se quede a 20px de la derecha de la pagina*/
 }/*Aqui termina la parte de la barra superior*/
@@ -106,4 +106,15 @@ h2{/*alineacion, color y margenes del texto 'ULTIMOS MODELOS DE LOS MEJORES COCH
     margin-right:140px;
     margin-top:80px;
     margin-bottom:40px;
+}
+.boton{/*margen para el boton*/
+    margin-top: 20px;
+    margin-bottom: 60px;
+}
+a{/*texto del boton*/
+    color:white;
+    text-decoration: none;/*hace que no se subraye los botones si tienen un link*/
+}
+a:hover{/*texto del link cuando pasas el cursor por encima*/
+    color:white;
 }/*Termina la parte de las imagenes, nombres y pagina de nuevo elemento*/
