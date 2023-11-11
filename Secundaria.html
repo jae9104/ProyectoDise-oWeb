@@ -10,6 +10,7 @@
 </head>
 
 <body>
+    <!-- barra superior de la página -->
     <nav class="navbar navbar-expand-md bg-dark fixed-top">
         <div class="container-fluid">
             <a class="navbar-brand"> TU GT EN CASA </a>
@@ -27,6 +28,8 @@
     </nav>
 
     <br>
+
+    <!-- contenedor principal donde encontramos titulos, texto principal, tabla de especificaciones e imagen principal-->
 
     <div class="container-fluid" id="contenedorPrincipal">
         <div class="row justify-content-center" style="margin-top: 10px">
@@ -109,6 +112,8 @@
         </div>
     </div>
 
+    <!-- Contenedor que contiene el formulario para añadir comentarios y las propias opiniones-->
+
     <div class="container-fluid">
         <div class="row">
             <div class="Formulario">
@@ -117,7 +122,12 @@
                 </div>
                 <div class="container-fluid">
                     <form class="row">
-                        <div class="col-md-8">
+                        <div class="col-md-4">
+                            <label for="name"> Nombre </label>
+                            <input type="name" class="form-control" id="name" placeholder="Introduce un nombre"
+                                required>
+                        </div>
+                        <div class="col-md-4">
                             <label for="email"> Email </label>
                             <input type="email" class="form-control" id="email" placeholder="Introduce un email"
                                 required>
@@ -139,12 +149,51 @@
                         </div>
                     </form>
                 </div>
+
+                <br><br>
+
+                <div class="opiniones">
+                    <div class="container-fluid">
+                        <div class="row">
+                            <div class="col-md-10">
+                                <div class="p-4 rounded border" id="contenedorOpiniones">
+                                    <h3>Opiniones</h3>
+                                    <div class="comment">
+                                        <div class="row">
+                                            <div class="col-11">
+                                                <p><strong>Jorge:</strong> Locura de coche. ¡Pura Potencia! </p>
+                                            </div>
+                                            <div class="col-1">
+                                                <div class="rating-box rating-10">10</div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="comment">
+                                        <div class="row">
+                                            <div class="col-11">
+                                                <p><strong>Ivan:</strong> Se siente lento en Le Mans </p>
+                                            </div>
+                                            <div class="col-1">
+                                                <div class="rating-box rating-4">4</div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+
+                    </div>
+                </div>
             </div>
-        </div>
-    </div>
 
-    <br><br><br>
+            <br><br><br>
 
+
+
+</body>
+
+</html>
 
 
 </body>
