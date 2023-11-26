@@ -56,102 +56,20 @@
                 <div class="container">
                     <div class="mt-3 mb-3 ml3 mr3 img-fluid">
                         <h2><strong>ULTIMOS MODELOS DE LOS MEJORES COCHES</strong></h2>
-                        <figure class="figure">
-                            <a href="pagSecundaria.html">
-                                <img src="imagenes/nissanGtr.jpg" width="175px" class="texto-agrandable"
-                                    class="figure-img img-fluid rounded" alt="Nissan GTR"></a>
-                            <figcaption class="figure-caption" style="text-align: center">
-                                <h5><strong>Nissan GTR</strong></h5>
-                            </figcaption>
-                        </figure>
-                        <figure class="figure">
-                            <a href="pagSecundaria.html">
-                                <img src="imagenes/dodgeChallenger.jpg" class="texto-agrandable" width="175px"
-                                    class="figure-img img-fluid rounded" alt="Dodge Challenger"></a>
-                            <figcaption class="figure-caption" style="text-align: center">
-                                <h5><strong>Dodge Challenger</strong></h5>
-                            </figcaption>
-                        </figure>
-                        <figure class="figure">
-                            <a href="pagSecundaria.html">
-                                <img src="imagenes/fordMustang.jpeg" class="texto-agrandable" width="175px"
-                                    class="figure-img img-fluid rounded" alt="Ford Mustang"></a>
-                            <figcaption class="figure-caption" style="text-align: center">
-                                <h5><strong>Ford Mustang</strong></h5>
-                            </figcaption>
-                        </figure>
-                        <figure class="figure">
-                            <a href="pagSecundaria.html">
-                                <img src="imagenes/toyotaSupra.jpg" class="texto-agrandable" width="175px"
-                                    class="figure-img img-fluid rounded" alt="Toyota Supra"></a>
-                            <figcaption class="figure-caption" style="text-align: center">
-                                <h5><strong>Toyota Supra</strong></h5>
-                            </figcaption>
-                        </figure>
-                        <figure class="figure">
-                            <a href="pagSecundaria.html">
-                                <img src="imagenes/bmwM3.webp" class="texto-agrandable" width="175px"
-                                    class="figure-img img-fluid rounded" alt="BMW M3"></a>
-                            <figcaption class="figure-caption" style="text-align: center">
-                                <h5><strong>BMW M3</strong></h5>
-                            </figcaption>
-                        </figure>
-                        <figure class="figure">
-                            <a href="pagSecundaria.html">
-                                <img src="imagenes/porsche911Gr3.jpeg" class="texto-agrandable" width="175px"
-                                    class="figure-img img-fluid rounded" alt="Porsche 911 GT3"></a>
-                            <figcaption class="figure-caption" style="text-align: center">
-                                <h5><strong>Porsche 911 GT3</strong></h5>
-                            </figcaption>
-                        </figure>
-                        <figure class="figure">
-                            <a href="pagSecundaria.html">
-                                <img src="imagenes/chevroletCamaro.jpg" class="texto-agrandable" width="175px"
-                                    class="figure-img img-fluid rounded" alt="Chevrolet Camaro"></a>
-                            <figcaption class="figure-caption" style="text-align: center">
-                                <h5><strong>Chevrolet Camaro</strong></h5>
-                            </figcaption>
-                        </figure>
-                        <figure class="figure">
-                            <a href="pagSecundaria.html">
-                                <img src="imagenes/audiR8.jpg" class="texto-agrandable" width="175px"
-                                    class="figure-img img-fluid rounded" alt="Audi R8"></a>
-                            <figcaption class="figure-caption" style="text-align: center">
-                                <h5><strong>Audi R8</strong></h5>
-                            </figcaption>
-                        </figure>
-                        <figure class="figure">
-                            <a href="pagSecundaria.html">
-                                <img src="imagenes/mercedesAmgGtr.webp" class="texto-agrandable" width="175px"
-                                    class="figure-img img-fluid rounded" alt="Mercedes AMG GT"></a>
-                            <figcaption class="figure-caption" style="text-align: center">
-                                <h5><strong>Mercedes AMG GT</strong></h5>
-                            </figcaption>
-                        </figure>
-                        <figure class="figure">
-                            <a href="pagSecundaria.html">
-                                <img src="imagenes/ferrariF40.avif" class="texto-agrandable" width="175px"
-                                    class="figure-img img-fluid rounded" alt="Ferrari F40"></a>
-                            <figcaption class="figure-caption" style="text-align: center">
-                                <h5><strong>Ferrari F40</strong></h5>
-                            </figcaption>
-                        </figure>
-                        <figure class="figure">
-                            <a href="pagSecundaria.html">
-                                <img src="imagenes/lamborghiniUrus.webp" class="texto-agrandable" width="175px"
-                                    class="figure-img img-fluid rounded" alt="Lamborghini Urus"></a>
-                            <figcaption class="figure-caption" style="text-align: center">
-                                <h5><strong>Lamborghini Urus</strong></h5>
-                            </figcaption>
-                        </figure>
-                        <figure class="figure">
-                            <a href="pagSecundaria.html">
-                                <img src="imagenes/paganiHuayra.jpg" class="texto-agrandable" width="175px"
-                                    class="figure-img img-fluid rounded" alt="Pagani Huayra"></a>
-                            <figcaption class="figure-caption" style="text-align: center">
-                                <h5><strong>Pagani Huayra</strong></h5>
-                            </figcaption>
-                        </figure>
+
+                        {{#posts}}
+                        <div class="post"></div>
+                            <figure class="figure">
+                                <a href="/post/{{id}}">
+                                    <img src="{{image}}" width="175px" class="texto-agrandable"
+                                        class="figure-img img-fluid rounded" alt="{{title}}"></a>
+                                <figcaption class="figure-caption" style="text-align: center">
+                                    <h5><strong>{{title}}</strong></h5>
+                                </figcaption>
+                            </figure>
+                        </div>
+                        {{/posts}}
+
                         <div class="col-md-2">
                             <button type="submit" class="btn btn-success boton"><a href="pagNewElem.html"
                                     style="margin-bottom:30px">Te compramos tu coche</a></button>
