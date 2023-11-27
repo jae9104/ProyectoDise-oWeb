@@ -2,17 +2,17 @@ import express from 'express';
 import * as boardService from './boardService.js';
 
 const router = express.Router();
+
 /*Muestra todas las publicaciones */
 router.get('/', (req, res) => {
     res.render('index', { 
-        posts: boardService.getPostsSummary() 
+        posts: boardService.getPosts() 
     });
 });
 
 /*Modifica los valores que tiene dentro de cada post */
-router.post('/post/new', upload.single('imagen'), (req, res) => {
-    let { nombre, precio, mano, kilometros, combustible, transmision, caballos, descripcion } = req.body;
-    let imagen = req.file;  // Esto depende de cómo multer almacena la imagen
+router.post('/post/new', (req, res) => {
+    let { nombre, precio, mano, kilometros, combustible, transmision, caballos, descripcion, imagen } = req.body;
 
     // Luego, puedes pasar las nuevas propiedades al objeto post
     boardService.addPost({ nombre, precio, mano, kilometros, combustible, transmision, caballos, descripcion, imagen });
