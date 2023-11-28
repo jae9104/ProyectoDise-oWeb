@@ -22,10 +22,9 @@ router.post('/post/new', (req, res) => {
 
 /*Muestra los detalles de una publicación específica en función de su identificador */
 router.get('/post/:id', (req, res) => {
-
-    let post = boardService.getPost(req.params.id);
-
-    res.render('show_post', { post });
+    const postDetails = boardService.getPostDetails(req.params.id);
+    console.log('Detalles del post:', postDetails);  ///depurador de contenido de cada post
+    res.render('pagSecundaria', { post: postDetails });
 });
 
 /* Elimina una publicación específica en función de su identificador */
@@ -35,6 +34,22 @@ router.get('/post/:id/delete', (req, res) => {
 
     res.redirect('/');//nos redirige a la pagina index
 });
+
+//////////////sección opiniones//////////////
+
+router.post('/opinion/publicar-comentario', (req, res) => {
+    let { nombre, email, valoracion, comentario } = req.body;
+    console.log('Opinion: ', nombre, email, valoracion, comentario); ////depurador de opiniones
+    boardService.agregarOpinion({nombre, email, valoracion, comentario }); 
+    res.redirect('pagSecundaria');
+});
+  
+router.get('/obtener-opiniones', (req, res) => {
+    res.render('pagSecundaria', { opiniones: boardService.obtenerOpiniones()} )
+});
+  
+
+
 
 export default router;
 
