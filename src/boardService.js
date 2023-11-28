@@ -1,4 +1,5 @@
 const posts = new Map();
+const opiniones = new Map();
 let nextId = 0;
 
 addPost({ nombre: "Audi R8", precio: "250000", mano: "1º mano", kilometros: "0-10k", combustible: "Gasolina", transmision: "Manual", caballos: "400", descripcion: "Mejor coche para curvasa", imagen: "https://cdn.autobild.es/sites/navi.axelspringer.es/public/media/image/2022/10/audi-r8-v10-gt-2023-2831875.jpg"  });
@@ -37,7 +38,7 @@ export function getPostDetails(id) {
         return {
             id: post.id,
             nombre: post.nombre,
-            precio: post.precio,
+            precio: post.precio + " €",
             mano: post.mano,
             kilometros: post.kilometros,
             combustible: post.combustible,
@@ -47,6 +48,23 @@ export function getPostDetails(id) {
             imagen: post.imagen
         };
     }
-    return null;  // Retorna null si no se encuentra el post con el ID proporcionado
+    
 }
+
+///////////////////sección opiniones///////////////////////
+
+
+export function agregarOpinion(opinion){
+        
+        opiniones.set(opinion.nombre,opinion);
+    }
+
+export function obtenerOpiniones(){
+    return Array.from(opiniones.values()).map(opinion => ({
+        nombre: opinion.nombre,
+        email: opinion.email,
+        valoracion: opinion.email,
+        comentario: opinion.comentario
+    }));
+    }
 
