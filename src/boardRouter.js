@@ -10,14 +10,14 @@ router.get('/', (req, res) => {
     });
 });
 
-/*Modifica los valores que tiene dentro de cada post */
+/*Añade un post y define sus componentes */
 router.post('/post/new', (req, res) => {
     let { nombre, precio, mano, kilometros, combustible, transmision, caballos, descripcion, imagen } = req.body;
 
     // Luego, puedes pasar las nuevas propiedades al objeto post
     boardService.addPost({ nombre, precio, mano, kilometros, combustible, transmision, caballos, descripcion, imagen });
 
-    res.render('saved_post');
+    res.redirect('/');//nos redirige a la pagina index
 });
 
 /*Muestra los detalles de una publicación específica en función de su identificador */
@@ -29,15 +29,12 @@ router.get('/post/:id', (req, res) => {
 });
 
 /* Elimina una publicación específica en función de su identificador */
-router.get('/post/:id', (req, res) => {
-    let post = boardService.getPostDetails(req.params.id);
+router.get('/post/:id/delete', (req, res) => {
 
-    if (post) {
-        res.render('show_post', { post });
-    } else {
-        // Manejar el caso en el que no se encuentra el post con el ID proporcionado
-        res.render('post_not_found');
-    }
+    boardService.deletePost(req.params.id);
+
+    res.redirect('/');//nos redirige a la pagina index
 });
 
 export default router;
+
