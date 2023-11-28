@@ -78,7 +78,7 @@ label{
 }
 
 #contenedorOpiniones{      /* Añade colores al contenedor donde se colocan las opiniones (se añade el !important para sobreescribir la config de boostrap)*/
-    border-color: white  !important;  
+    border-color: olive  !important;  
     background: #212529;
 }
 
