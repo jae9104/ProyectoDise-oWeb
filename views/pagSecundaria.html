@@ -1,12 +1,12 @@
 <!DOCTYPE html>
 <html>
-
+{{#post}}
 <head>
-
-    <title>Nissan GTR</title>
+    <base href="/">
+    <title>{{nombre}}</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet">
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js"></script>
-    <link type="text/css" rel="stylesheet" href="styleSecundaria.css" />
+    <link type="text/css" rel="stylesheet" href="css\styleSecundaria.css" />
 </head>
 
 <body>
@@ -17,7 +17,7 @@
             <div class="collapse navbar-collapse" id="navbarCollapse">
                 <ul class="navbar-nav">
                     <li class="nav-item">
-                        <a class="nav-link" href="pag principal.html">MENU </a>
+                        <a class="nav-link" href="/">MENU </a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="pagNewElem.html">TE COMPRAMOS TU COCHE </a>
@@ -38,14 +38,8 @@
                     <div class="row justify-content-center">
                         <div class="col-sm-1"></div>
                         <div class="col-sm-10">
-                            <h1>Nissan GT-R 2024</h1>
-                            <h3>El coche de ensueño</h3>
-                            <p id="textoPrincipal">El Nissan GT-R, apodado "Godzilla", es un icónico deportivo con un
-                                motor V6 biturbo de más de 550 caballos de fuerza que ofrece una emocionante
-                                aceleración. Su tecnología de tracción integral y sistema de control dinámico garantizan
-                                un manejo estable incluso en curvas desafiantes. En su lujosa cabina, disfrutarás de
-                                comodidad y conectividad. El GT-R es la elección perfecta si buscas potencia, agilidad y
-                                emoción en un automóvil deportivo.</p>
+                            <h1><strong>{{nombre}}</strong></h1>
+                            <p id="textoPrincipal">{{descripcion}}</p>
 
                             <br>
                             <table class="table table-sm table-bordered table-dark" style=" border-color: olive;">
@@ -58,39 +52,27 @@
                                 <tbody>
                                     <tr>
                                         <td>Precio</td>
-                                        <td>120.000€</td>
+                                        <td>{{precio}}</td>
                                     </tr>
                                     <tr>
                                         <td>Mano</td>
-                                        <td>1º Mano</td>
+                                        <td>{{mano}}</td>
                                     </tr>
                                     <tr>
                                         <td>Kilometros</td>
-                                        <td>0</td>
-                                    </tr>
-                                    <tr>
-                                        <td>Año de matriculación</td>
-                                        <td>2023</td>
+                                        <td>{{kilometros}}</td>
                                     </tr>
                                     <tr>
                                         <td>Combustible</td>
-                                        <td>Gasolina</td>
-                                    </tr>
-                                    <tr>
-                                        <td>Puertas</td>
-                                        <td>3</td>
-                                    </tr>
-                                    <tr>
-                                        <td>Asientos</td>
-                                        <td>2</td>
+                                        <td>{{combustible}}</td>
                                     </tr>
                                     <tr>
                                         <td>Transmisión</td>
-                                        <td>Manual</td>
+                                        <td>{{transmision}}</td>
                                     </tr>
                                     <tr>
                                         <td>Caballos de potencia</td>
-                                        <td>550</td>
+                                        <td>{{caballos}}</td>
                                     </tr>
                                 <tbody>
                             </table>
@@ -98,7 +80,7 @@
 
                             <button type="submit" class="btn btn-secondary" id="boton">Editar</button>
                             <button type="submit" class="btn btn-danger" id="boton">Borrar</button>
-                            <button type="submit" class="btn btn-success" id="boton"><a href="index.html">Ver
+                            <button type="submit" class="btn btn-success" id="boton"><a href="/">Ver
                                     todos los coches</a></button>
 
                         </div>
@@ -107,11 +89,11 @@
                 </div>
             </div>
             <div class="col-sm-6">
-                <img class="img-fluid" style="width: 85%;" src="imagenes/nissanGtr.jpg">
+                <img class="img-fluid" style="width: 85%;" src="{{imagen}}">
             </div>
         </div>
     </div>
-
+{{/post}}
     <!-- Contenedor que contiene el formulario para añadir comentarios y las propias opiniones-->
 
     <div class="container-fluid">
@@ -158,26 +140,18 @@
                             <div class="col-md-10">
                                 <div class="p-4 rounded border" id="contenedorOpiniones">
                                     <h3>Opiniones</h3>
-                                    <div class="comment">
-                                        <div class="row">
-                                            <div class="col-11">
-                                                <p><strong>Jorge:</strong> Locura de coche. ¡Pura Potencia! </p>
+                                    {{#opiniones}}
+                                        <div class="comment">
+                                            <div class="row">
+                                                <div class="col-11">
+                                                    <p><strong>{{nombre}}:</strong> {{comentario}}</p>
+                                                </div>
+                                                <div class="col-1">
+                                                    <div class="rating-box rating-{{valoracion}}">{{valoracion}}</div>
+                                                </div>
                                             </div>
-                                            <div class="col-1">
-                                                <div class="rating-box rating-10">10</div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="comment">
-                                        <div class="row">
-                                            <div class="col-11">
-                                                <p><strong>Ivan:</strong> Se siente lento en Le Mans </p>
-                                            </div>
-                                            <div class="col-1">
-                                                <div class="rating-box rating-4">4</div>
-                                            </div>
-                                        </div>
-                                    </div>
+                                        </div>  
+                                    {{/opiniones}}
                                 </div>
                             </div>
                         </div>
@@ -190,7 +164,7 @@
             <br><br><br>
 
 
-
+            
 </body>
 
 </html>
