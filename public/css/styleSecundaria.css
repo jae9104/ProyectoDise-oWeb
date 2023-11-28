@@ -68,7 +68,7 @@ p {
 /* Estilos para el formulario */
 
 .Formulario{
-    color: #808000;
+    color: white;
     padding: 5%;  
 }
 
@@ -78,7 +78,7 @@ label{
 }
 
 #contenedorOpiniones{      /* Añade colores al contenedor donde se colocan las opiniones (se añade el !important para sobreescribir la config de boostrap)*/
-    border-color: olive  !important;  
+    border-color: white  !important;  
     background: #212529;
 }
 
