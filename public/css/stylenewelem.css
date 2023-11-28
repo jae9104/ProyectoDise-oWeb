@@ -48,11 +48,11 @@ body{
     color:white;
 }
 .titulo h6{/*segundo texto color aceituna*/
-    color:#808000;
+    color:white;
 }
 .Formulario{/*que el formulario tenga margen arriba y que las palabras sean de color aceitunas*/
     margin-top: 19%;
-    color: #808000;
+    color: white;
 }
 input:invalid:required, textarea:invalid:required, select:invalid:required {/*Para que sallga en rojo si no has completado ese campo*/
     border: 2px solid red;
