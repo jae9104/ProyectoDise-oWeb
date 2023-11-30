@@ -15,9 +15,15 @@ router.post('/post/new', (req, res) => {
     let { nombre, precio, mano, kilometros, combustible, transmision, caballos, descripcion, imagen } = req.body;
 
     // Luego, puedes pasar las nuevas propiedades al objeto post
-    boardService.addPost({ nombre, precio, mano, kilometros, combustible, transmision, caballos, descripcion, imagen });
-
-    res.redirect('/');//nos redirige a la pagina index
+    let ok = false;
+    let fallo = {message: ''}; 
+    boardService.addPost({ nombre, precio, mano, kilometros, combustible, transmision, caballos, descripcion, imagen }, ok, fallo);
+    if (ok){
+        res.redirect('/');//nos redirige a la pagina index
+    }
+    else{
+        res.send(fallo.message); // Envia el mensaje de error
+    }
 });
 
 /*Muestra los detalles de una publicación específica en función de su identificador */
@@ -50,5 +56,3 @@ router.post('/post/:id', (req, res) => {
 
 
 export default router;
-
-
