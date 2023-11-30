@@ -16,5 +16,9 @@ app.use(express.static(__dirname + '/../public'));
 
 app.use('/', boardRouter);
 
+app.get("/pagNewElem", (req,res)=>{
+    res.render('pagNewElem')
+})
+
 app.listen(3000, () => console.log('Listening on port 3000!'));
 
