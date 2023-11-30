@@ -110,6 +110,7 @@ label{
     text-align: center;
     border-radius: 5px;
     font-weight: bold;
+    color: black;
 }
 
 /* Estilos para el fondo*/
@@ -140,3 +141,4 @@ a{
 a:hover{/*texto del link cuando pasas el cursor por encima*/
     color:white;
 }
+
