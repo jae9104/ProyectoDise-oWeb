@@ -22,9 +22,9 @@ router.post('/post/new', (req, res) => {
 
 /*Muestra los detalles de una publicación específica en función de su identificador */
 router.get('/post/:id', (req, res) => {
-    const postDetails = boardService.getPostDetails(req.params.id);
-    console.log('Detalles del post:', postDetails);  ///depurador de contenido de cada post
-    res.render('pagSecundaria', { post: postDetails });
+    let id = req.params.id
+    const postDetails = boardService.getPostDetails(id);
+    res.render('pagSecundaria', { post: postDetails , opiniones: boardService.obtenerOpiniones(id)});
 });
 
 /* Elimina una publicación específica en función de su identificador */
@@ -37,19 +37,18 @@ router.get('/post/:id/delete', (req, res) => {
 
 //////////////sección opiniones//////////////
 
-router.post('/opinion/publicar-comentario', (req, res) => {
+router.post('/post/:id', (req, res) => {
+    let id = req.params.id;
     let { nombre, email, valoracion, comentario } = req.body;
-    console.log('Opinion: ', nombre, email, valoracion, comentario); ////depurador de opiniones
-    boardService.agregarOpinion({nombre, email, valoracion, comentario }); 
-    res.redirect('pagSecundaria');
+    boardService.agregarOpinion(id ,{ nombre, email, valoracion, comentario }); 
+    const opiniones = boardService.obtenerOpiniones(id);
+    res.render('pagSecundaria', { opiniones, post: boardService.getPostDetails(id) });
 });
-  
-router.get('/obtener-opiniones', (req, res) => {
-    res.render('pagSecundaria', { opiniones: boardService.obtenerOpiniones()} )
-});
-  
 
+  
+  
 
 
 export default router;
+
 
