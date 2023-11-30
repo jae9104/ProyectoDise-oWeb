@@ -77,11 +77,14 @@
                                 <tbody>
                             </table>
 
-
-                            <button type="submit" class="btn btn-secondary" id="boton">Editar</button>
-                            <button type="submit" class="btn btn-danger" id="boton">Borrar</button>
-                            <button type="submit" class="btn btn-success" id="boton"><a href="/">Ver
-                                    todos los coches</a></button>
+                            <!-- Contenedor de los botones -->
+                            <div class="d-flex">
+                                <button type="submit" class="btn btn-secondary mr-2" id="boton">Editar</button>
+                                <form action="/post/{{id}}/delete" method="get">
+                                    <button type="submit" class="btn btn-danger mr-2" id="boton">Borrar</button>
+                                </form>
+                                <button type="submit" class="btn btn-success" id="boton"><a href="/">Ver todos los coches</a></button>
+                            </div>
 
                         </div>
                         <div class="col-sm-1"></div>
@@ -93,7 +96,7 @@
             </div>
         </div>
     </div>
-{{/post}}
+    
     <!-- Contenedor que contiene el formulario para añadir comentarios y las propias opiniones-->
 
     <div class="container-fluid">
@@ -103,26 +106,27 @@
                     <h4> ¿Quieres dejar tu opinión sobre el producto? </h4>
                 </div>
                 <div class="container-fluid">
-                    <form class="row">
+                    <form class="row" method="post" action="/post/{{id}}">
                         <div class="col-md-4">
+    {{/post}}
                             <label for="name"> Nombre </label>
-                            <input type="name" class="form-control" id="name" placeholder="Introduce un nombre"
+                            <input type="name" class="form-control" name="nombre" placeholder="Introduce un nombre"
                                 required>
                         </div>
                         <div class="col-md-4">
                             <label for="email"> Email </label>
-                            <input type="email" class="form-control" id="email" placeholder="Introduce un email"
+                            <input type="email" class="form-control" name="email" placeholder="Introduce un email"
                                 required>
                         </div>
                         <div class="col-md-2">
                             <label for="cantidad">Valoración</label>
-                            <input type="number" id="cantidad" name="cantidad" min="0" step="1" max="10"
+                            <input type="number" id="cantidad" name="valoracion" min="1" step="1" max="10"
                                 class="form-control" required>
                         </div>
 
                         <div class="col-md-10">
                             <label for="comment"> Comentario </label>
-                            <textarea class="form-control" placeholder="Introduce tu comentario"
+                            <textarea class="form-control" name="comentario" placeholder="Introduce tu comentario"
                                 id="floatingTextarea2"></textarea>
                         </div>
                         <div class="col-md-2"></div>
@@ -143,10 +147,10 @@
                                     {{#opiniones}}
                                         <div class="comment">
                                             <div class="row">
-                                                <div class="col-11">
+                                                <div class="col-11" style="word-wrap: break-word; overflow-wrap: break-word;">
                                                     <p><strong>{{nombre}}:</strong> {{comentario}}</p>
                                                 </div>
-                                                <div class="col-1">
+                                                <div class="col-1 d-flex align-items-center">
                                                     <div class="rating-box rating-{{valoracion}}">{{valoracion}}</div>
                                                 </div>
                                             </div>
@@ -155,14 +159,17 @@
                                 </div>
                             </div>
                         </div>
-
-
                     </div>
                 </div>
             </div>
 
             <br><br><br>
 
+
+            
+</body>
+
+</html>
 
             
 </body>
