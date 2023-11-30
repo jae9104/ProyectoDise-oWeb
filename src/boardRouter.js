@@ -10,19 +10,74 @@ router.get('/', (req, res) => {
     });
 });
 
+function validarFormulario(post,fallo = {}) {
+    // Validación básica
+    if (post.nombre === "") {
+        fallo.message = "Complete el campo obligatorio de Marca y modelo del coche";
+        return false;
+    }
+    if (post.imagen === "") {
+        fallo.message = "Complete el campo obligatorio de Dirección de la imagen";
+        return false;
+    }
+    if (post.precio === "") {
+        fallo.message = "Complete el campo obligatorio de Precio estimado";
+        return false;
+    }
+    if (post.mano === "" || post.mano === "Selecciona una opción") {
+        fallo.message = "Complete el campo obligatorio de Mano";
+        return false;
+    }
+    if (post.kilometros === "" || post.kilometros === "Selecciona una opción") {
+        fallo.message = "Complete el campo obligatorio de Kilometros";
+        return false;
+    }
+    if (post.combustible === "" || post.combustible === "Selecciona una opción") {
+        fallo.message = "Complete el campo obligatorio de Combustible";
+        return false;
+    }
+    if (post.transmision === "" || post.transmision === "Selecciona una opción") {
+        fallo.message = "Complete el campo obligatorio de Transmision";
+        return false;
+    }
+    if (post.caballos === "") {
+        fallo.message = "Complete el campo obligatorio de Caballos de potencia";
+        return false;
+    }
+    if (post.descripcion === "") {
+        fallo.message = "Complete el campo obligatorio de Descripcion y/o defectos";
+        return false;
+    }
+  
+    // Validacion para valores dentro de los rangos
+    if (parseInt(post.precio) < 0) {
+        fallo.message = "El precio no puede ser negativo";
+        return false;
+    }
+    if (parseInt(post.caballos) < 0 || parseInt(post.caballos) > 1200) {
+        fallo.message = "Los caballos deben estar entre 0 y 1200";
+        return false;
+      }
+  
+  
+    // Si todas las validaciones pasan, el formulario se envía
+    return true;
+}
 /*Añade un post y define sus componentes */
-router.post('/post/new', (req, res) => {
+router.post('/pagNewElem', (req, res) => {
     let { nombre, precio, mano, kilometros, combustible, transmision, caballos, descripcion, imagen } = req.body;
 
     // Luego, puedes pasar las nuevas propiedades al objeto post
-    let ok = false;
-    let fallo = {message: ''}; 
-    boardService.addPost({ nombre, precio, mano, kilometros, combustible, transmision, caballos, descripcion, imagen }, ok, fallo);
+    let fallo = {};
+    let ok = validarFormulario(req.body,fallo);
     if (ok){
+        boardService.addPost({ nombre, precio, mano, kilometros, combustible, transmision, caballos, descripcion, imagen });
         res.redirect('/');//nos redirige a la pagina index
     }
     else{
-        res.send(fallo.message); // Envia el mensaje de error
+        boardService.addFallo(fallo);
+        res.render('pagNewElem', {fallos: boardService.lastFallo()})
+        boardService.inicializarFallos(); //reinicializa el array de fallos
     }
 });
 
