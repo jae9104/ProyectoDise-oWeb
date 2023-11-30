@@ -52,25 +52,25 @@
                         <h6>Rellena el siguiente formulario y te garantizamos la venta de tu coche </h6>
                     </div>
                     <div class="container-fluid">
-                        <form class="row" action="post/new" method="post">
+                        <form class="row" action="post/new" method="post" id="tuFormulario">
                             <div class="col-md-12">
                                 <label for="formGroupExampleInput" class="form-label">Marca y modelo del
                                     coche</label>
                                 <input type="text" class="form-control" id="formGroupExampleInput"
-                                    placeholder="Ejemplo: Nissan GTR" required name='nombre'>
+                                    placeholder="Ejemplo: Nissan GTR" name='nombre'>
                             </div>
                             <div class="col-md-12">
                                 <label for="formGroupExampleInput" class="form-label">Dirección de la imagen</label>
-                                <input type="text" class="form-control" id="formGroupExampleInput" required name='imagen'>
+                                <input type="text" class="form-control" id="formGroupExampleInput" name='imagen'>
                             </div>
                             <div class="col-md-4">
                                 <label for="cantidad" style="margin-bottom: 7px">Precio estimado</label>
-                                <input type="number" id="cantidad" name="cantidad" min="0" step="any"
-                                    class="form-control" placeholder="Selecciona una opcion" required name='precio'>
+                                <input type="number" id="cantidad" name="cantidad" step="any" class="form-control"
+                                    placeholder="Selecciona una opcion" name='precio'>
                             </div>
                             <div class="col-md-4">
                                 <label for="inputState" class="form-label">Mano</label>
-                                <select id="inputState" class="form-select" required name='mano'>
+                                <select id="inputState" class="form-select" name='mano'>
                                     <option value="" disabled selected>Selecciona una opción</option>
                                     <option>1º mano</option>
                                     <option>2º mano</option>
@@ -80,7 +80,7 @@
                             </div>
                             <div class="col-md-4">
                                 <label for="inputState" class="form-label">Kilometros</label>
-                                <select id="inputState" class="form-select" required name='kilometros'>
+                                <select id="inputState" class="form-select" name='kilometros'>
                                     <option value="" disabled selected>Selecciona una opción</option>
                                     <option>0-10k</option>
                                     <option>10k-20k</option>
@@ -92,7 +92,7 @@
                             </div>
                             <div class="col-md-4">
                                 <label for="inputState" class="form-label">Combustible</label>
-                                <select id="inputState" class="form-select" required name='combustible'>
+                                <select id="inputState" class="form-select" name='combustible'>
                                     <option value="" disabled selected>Selecciona una opción</option>
                                     <option>Gasolina</option>
                                     <option>Diesel</option>
@@ -102,7 +102,7 @@
                             </div>
                             <div class="col-md-4">
                                 <label for="inputState" class="form-label">Transmision</label>
-                                <select id="inputState" class="form-select" required name='transmision'>
+                                <select id="inputState" class="form-select" name='transmision'>
                                     <option value="" disabled selected>Selecciona una opción</option>
                                     <option>Manual</option>
                                     <option>Automatico</option>
@@ -110,13 +110,14 @@
                             </div>
                             <div class="col-md-4">
                                 <label for="cantidad" style="margin-bottom: 7px">Caballos de potencia</label>
-                                <input type="number" id="cantidad" name="cantidad" min="100" step="any" max="1200"
-                                    class="form-control" placeholder="Selecciona una opcion" required name='caballos'>
+                                <input type="number" id="cantidad" name="cantidad" step="any" class="form-control"
+                                    placeholder="Selecciona una opcion" name='caballos'>
                             </div>
                             <div class="col-md-12">
                                 <label for="floatingTextarea2" style="margin-bottom: 7px">Descripcion y/o
                                     defectos</label>
-                                <textarea class="form-control" id="floatingTextarea2" style="height: 100px" required name='descripcion'></textarea>
+                                <textarea class="form-control" id="floatingTextarea2" style="height: 100px"
+                                    name='descripcion'></textarea>
                             </div>
                             <div class="col-md-2">
                                 <button type="submit" class="btn btn-success">Guardar</button>
@@ -134,4 +135,3 @@
 </body>
 
 </html>
-
