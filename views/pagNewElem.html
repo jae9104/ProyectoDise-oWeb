@@ -60,24 +60,26 @@
                                 </div>
                             </div>
                             {{/fallos}}
+                            {{#post}}
                             <div class="col-md-12">
                                 <label for="formGroupExampleInput" class="form-label">Marca y modelo del
                                     coche</label>
                                 <input type="text" class="form-control" id="formGroupExampleInput"
-                                    placeholder="Ejemplo: Nissan GTR" name='nombre'>
+                                    placeholder="Ejemplo: Nissan GTR" name='nombre' value="{{nombre}}">
                             </div>
                             <div class="col-md-12">
                                 <label for="formGroupExampleInput" class="form-label">Dirección de la imagen</label>
-                                <input type="text" class="form-control" id="formGroupExampleInput" name='imagen'>
+                                <input type="text" class="form-control" id="formGroupExampleInput" name='imagen'
+                                    value="{{imagen}}">
                             </div>
                             <div class="col-md-4">
                                 <label for="cantidad" style="margin-bottom: 7px">Precio estimado</label>
                                 <input type="number" id="cantidad" name="cantidad" step="any" class="form-control"
-                                    placeholder="Selecciona una opcion" name='precio'>
+                                    placeholder="Selecciona una opcion" name='precio' value="{{precio}}">
                             </div>
                             <div class="col-md-4">
                                 <label for="inputState" class="form-label">Mano</label>
-                                <select id="inputState" class="form-select" name='mano'>
+                                <select id="inputState" class="form-select" name='mano' value="{{mano}}">
                                     <option selected>Selecciona una opción</option>
                                     <option>1º mano</option>
                                     <option>2º mano</option>
@@ -87,7 +89,7 @@
                             </div>
                             <div class="col-md-4">
                                 <label for="inputState" class="form-label">Kilometros</label>
-                                <select id="inputState" class="form-select" name='kilometros'>
+                                <select id="inputState" class="form-select" name='kilometros' value="{{kilometros}}">
                                     <option selected>Selecciona una opción</option>
                                     <option>0-10k</option>
                                     <option>10k-20k</option>
@@ -99,7 +101,7 @@
                             </div>
                             <div class="col-md-4">
                                 <label for="inputState" class="form-label">Combustible</label>
-                                <select id="inputState" class="form-select" name='combustible'>
+                                <select id="inputState" class="form-select" name='combustible' value="{{combustible}}">
                                     <option selected>Selecciona una opción</option>
                                     <option>Gasolina</option>
                                     <option>Diesel</option>
@@ -109,7 +111,7 @@
                             </div>
                             <div class="col-md-4">
                                 <label for="inputState" class="form-label">Transmision</label>
-                                <select id="inputState" class="form-select" name='transmision'>
+                                <select id="inputState" class="form-select" name='transmision' value="{{transmision}}">
                                     <option selected>Selecciona una opción</option>
                                     <option>Manual</option>
                                     <option>Automatico</option>
@@ -118,13 +120,14 @@
                             <div class="col-md-4">
                                 <label for="cantidad" style="margin-bottom: 7px">Caballos de potencia</label>
                                 <input type="number" id="cantidad" name="cantidad" step="any" class="form-control"
-                                    placeholder="Selecciona una opcion" name='caballos'>
+                                    placeholder="Selecciona una opcion" name='caballos' value="{{caballos}}">
                             </div>
                             <div class="col-md-12">
                                 <label for="floatingTextarea2" style="margin-bottom: 7px">Descripcion y/o
                                     defectos</label>
-                                <textarea class="form-control" id="floatingTextarea2" style="height: 100px; margin-bottom: 15px"
-                                    name='descripcion'></textarea>
+                                <textarea class="form-control" id="floatingTextarea2"
+                                    style="height: 100px; margin-bottom: 15px" name='descripcion'
+                                    value="{{descripcion}}"></textarea>
                             </div>
                             <div class="col-md-2">
                                 <button type="submit" class="btn btn-success">Guardar</button>
@@ -133,6 +136,7 @@
                                 <button type="botom" style="margin-left: 40px;" class="btn btn-danger"><a href="/"
                                         style="padding-bottom:30px">Cancelar</a></button>
                             </div>
+                            {{/post}}
                         </form>
                     </div>
                 </div>
@@ -142,3 +146,4 @@
 </body>
 
 </html>
+    
