@@ -54,10 +54,10 @@ export function getPostDetails(id) {
         return {
             id: post.id,
             nombre: post.nombre,
-            precio: post.precio + " €",
+            precio: post.precio,
             mano: post.mano,
             kilometros: post.kilometros,
-            combustible: post.combustible,
+            combustible: post.combustible, 
             transmision: post.transmision,
             caballos: post.caballos,
             descripcion: post.descripcion,
@@ -66,6 +66,7 @@ export function getPostDetails(id) {
     }
     
 }
+
 
 ///////////////////sección opiniones///////////////////////
 
@@ -83,3 +84,4 @@ export function agregarOpinion(id,opinion){
 export function obtenerOpiniones(idpag){
     return opiniones[idpag] || [];
 }
+
