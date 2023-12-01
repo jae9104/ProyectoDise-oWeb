@@ -84,4 +84,3 @@ export function agregarOpinion(id,opinion){
 export function obtenerOpiniones(idpag){
     return opiniones[idpag] || [];
 }
-
