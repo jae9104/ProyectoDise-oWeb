@@ -76,7 +76,7 @@ router.post('/pagNewElem', (req, res) => {
     }
     else{
         boardService.addFallo(fallo);
-        res.render('pagNewElem', {fallos: boardService.lastFallo()})
+        res.render('pagNewElem', {fallos: boardService.lastFallo(), FormData: req.body})
         boardService.inicializarFallos(); //reinicializa el array de fallos
     }
 });
@@ -117,6 +117,3 @@ router.post('/post/:id', (req, res) => {
 
 
 export default router;
-
-  
-
