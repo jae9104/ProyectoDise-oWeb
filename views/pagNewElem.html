@@ -67,18 +67,31 @@
                                     placeholder="Ejemplo: Nissan GTR" name='nombre' value="{{FormData.nombre}}">
                             </div>
                             <div class="col-md-12">
-                                <label for="formGroupExampleInputImagen" class="form-label">Dirección de la imagen</label>
-                                <input type="text" class="form-control" id="formGroupExampleInputImagen" name='imagen' value="{{FormData.imagen}}">
+                                <label for="formGroupExampleInputImagen" class="form-label">Dirección de la
+                                    imagen</label>
+                                <input type="text" class="form-control" id="formGroupExampleInputImagen" name='imagen'
+                                    value="{{FormData.imagen}}">
                             </div>
                             <div class="col-md-4">
                                 <label for="cantidadPrecio" style="margin-bottom: 7px">Precio estimado</label>
-                                <input type="number" id="cantidadPrecio" name="cantidad" step="any" class="form-control"
+                                <input type="number" id="cantidadPrecio" step="any" class="form-control"
                                     placeholder="Selecciona una opcion" name='precio' value="{{FormData.precio}}">
+                            </div>
+                            <div class="col-md-4">
+                                <label for="cantidadCaballos" style="margin-bottom: 7px">Kilometros</label>
+                                <input type="number" id="cantidadCaballos" step="any" class="form-control"
+                                    placeholder="Selecciona una opcion" name='kilometros'
+                                    value="{{FormData.kilometros}}">
+                            </div>
+                            <div class="col-md-4">
+                                <label for="cantidadCaballos" style="margin-bottom: 7px">Caballos de potencia</label>
+                                <input type="number" id="cantidadCaballos" step="any" class="form-control"
+                                    placeholder="Selecciona una opcion" name='caballos' value="{{FormData.caballos}}">
                             </div>
                             <div class="col-md-4">
                                 <label for="inputStateMano" class="form-label">Mano</label>
                                 <select id="inputStateMano" class="form-select" name='mano' value="{{FormData.mano}}">
-                                    <option>Selecciona una opción</option>
+                                    <option selected>Selecciona una opción</option>
                                     <option>1º mano</option>
                                     <option>2º mano</option>
                                     <option>3º mano</option>
@@ -86,20 +99,9 @@
                                 </select>
                             </div>
                             <div class="col-md-4">
-                                <label for="inputStateKm" class="form-label">Kilometros</label>
-                                <select id="inputStateKm" class="form-select" name='kilometros' value="{{FormData.kilometros}}">
-                                    <option selected>Selecciona una opción</option>
-                                    <option>0-10k</option>
-                                    <option>10k-20k</option>
-                                    <option>20k-50k</option>
-                                    <option>50k-100k</option>
-                                    <option>100k-200k</option>
-                                    <option>200k o mas</option>
-                                </select>
-                            </div>
-                            <div class="col-md-4">
                                 <label for="inputStateCombustible" class="form-label">Combustible</label>
-                                <select id="inputStateCombustible" class="form-select" name='combustible' value="{{FormData.combustible}}">
+                                <select id="inputStateCombustible" class="form-select" name='combustible'
+                                    value="{{FormData.combustible}}">
                                     <option selected>Selecciona una opción</option>
                                     <option>Gasolina</option>
                                     <option>Diesel</option>
@@ -115,16 +117,12 @@
                                     <option>Automatico</option>
                                 </select>
                             </div>
-                            <div class="col-md-4">
-                                <label for="cantidadCaballos" style="margin-bottom: 7px">Caballos de potencia</label>
-                                <input type="number" id="cantidadCaballos" name="cantidad" step="any" class="form-control"
-                                    placeholder="Selecciona una opcion" name='caballos' value="{{FormData.caballos}}">
-                            </div>
                             <div class="col-md-12">
                                 <label for="floatingTextarea2" style="margin-bottom: 7px">Descripcion y/o
                                     defectos</label>
                                 <textarea class="form-control" id="floatingTextarea2"
-                                    style="height: 100px; margin-bottom: 15px" name='descripcion'>{{FormData.descripcion}}</textarea>
+                                    style="height: 100px; margin-bottom: 15px"
+                                    name='descripcion'>{{FormData.descripcion}}</textarea>
                             </div>
                             <div class="col-md-2">
                                 <button type="submit" class="btn btn-success">Guardar</button>
