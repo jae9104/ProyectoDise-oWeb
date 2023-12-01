@@ -79,7 +79,9 @@
 
                             <!-- Contenedor de los botones -->
                             <div class="d-flex">
-                                <button type="submit" class="btn btn-secondary mr-2" id="boton">Editar</button>
+                                <form action="/post/{{id}}/edit" method="get">
+                                    <button type="submit" class="btn btn-secondary mr-2" id="boton">Editar</button>
+                                </form>
                                 <form action="/post/{{id}}/delete" method="get">
                                     <button type="submit" class="btn btn-danger mr-2" id="boton">Borrar</button>
                                 </form>
@@ -171,7 +173,3 @@
 
 </html>
 
-            
-</body>
-
-</html>
