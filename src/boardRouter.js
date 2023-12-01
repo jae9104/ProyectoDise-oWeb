@@ -80,7 +80,7 @@ router.post('/pagNewElem', (req, res) => {
     }
     else {
         boardService.addFallo(fallo);
-        res.render('pagNewElem', { fallos: boardService.lastFallo(), FormData: formData });
+        res.render('pagNewElem', { fallos: boardService.lastFallo(), FormData: req.body });
         boardService.inicializarFallos(); //reinicializa el array de fallos
     }
 });
