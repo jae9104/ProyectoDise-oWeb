@@ -5,12 +5,12 @@ const router = express.Router();
 
 /*Muestra todas las publicaciones */
 router.get('/', (req, res) => {
-    res.render('index', { 
-        posts: boardService.getPosts() 
+    res.render('index', {
+        posts: boardService.getPosts()
     });
 });
 
-function validarFormulario(post,fallo = {}) {
+function validarFormulario(post, fallo = {}) {
     // Validación básica
     if (post.nombre === "") {
         fallo.message = "Complete el campo obligatorio de Marca y modelo del coche";
@@ -48,8 +48,12 @@ function validarFormulario(post,fallo = {}) {
         fallo.message = "Complete el campo obligatorio de Descripcion y/o defectos";
         return false;
     }
-  
+
     // Validacion para valores dentro de los rangos
+    if (parseInt(post.kilometros) < 0) {
+        fallo.message = "Los kilometros no puede ser negativos";
+        return false;
+    }
     if (parseInt(post.precio) < 0) {
         fallo.message = "El precio no puede ser negativo";
         return false;
@@ -57,9 +61,9 @@ function validarFormulario(post,fallo = {}) {
     if (parseInt(post.caballos) < 0 || parseInt(post.caballos) > 1200) {
         fallo.message = "Los caballos deben estar entre 0 y 1200";
         return false;
-      }
-  
-  
+    }
+
+
     // Si todas las validaciones pasan, el formulario se envía
     return true;
 }
@@ -69,14 +73,14 @@ router.post('/pagNewElem', (req, res) => {
 
     // Luego, puedes pasar las nuevas propiedades al objeto post
     let fallo = {};
-    let ok = validarFormulario(req.body,fallo);
-    if (ok){
+    let ok = validarFormulario(req.body, fallo);
+    if (ok) {
         boardService.addPost({ nombre, precio, mano, kilometros, combustible, transmision, caballos, descripcion, imagen });
         res.redirect('/');//nos redirige a la pagina index
     }
-    else{
+    else {
         boardService.addFallo(fallo);
-        res.render('pagNewElem', {fallos: boardService.lastFallo(), FormData: req.body})
+        res.render('pagNewElem', { fallos: boardService.lastFallo(), FormData: formData });
         boardService.inicializarFallos(); //reinicializa el array de fallos
     }
 });
@@ -85,7 +89,7 @@ router.post('/pagNewElem', (req, res) => {
 router.get('/post/:id', (req, res) => {
     let id = req.params.id
     const postDetails = boardService.getPostDetails(id);
-    res.render('pagSecundaria', { post: postDetails , opiniones: boardService.obtenerOpiniones(id)});
+    res.render('pagSecundaria', { post: postDetails, opiniones: boardService.obtenerOpiniones(id) });
 });
 
 /* Elimina una publicación específica en función de su identificador */
@@ -107,13 +111,13 @@ router.get('/post/:id/edit', (req, res) => {
 router.post('/post/:id', (req, res) => {
     let id = req.params.id;
     let { nombre, email, valoracion, comentario } = req.body;
-    boardService.agregarOpinion(id ,{ nombre, email, valoracion, comentario }); 
+    boardService.agregarOpinion(id, { nombre, email, valoracion, comentario });
     const opiniones = boardService.obtenerOpiniones(id);
     res.render('pagSecundaria', { opiniones, post: boardService.getPostDetails(id) });
 });
 
-  
-  
+
+
 
 
 export default router;
