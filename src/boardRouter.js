@@ -93,7 +93,13 @@ router.get('/post/:id/delete', (req, res) => {
 
     boardService.deletePost(req.params.id);
 
-    res.redirect('/');//nos redirige a la pagina index
+    res.redirect('/');//nos redirige a la pagina index 
+});
+
+///editar un post
+router.get('/post/:id/edit', (req, res) => {
+
+    res.render('pagNewElem', { post: boardService.getPostDetails(req.params.id) });
 });
 
 //////////////sección opiniones//////////////
@@ -111,3 +117,6 @@ router.post('/post/:id', (req, res) => {
 
 
 export default router;
+
+  
+
