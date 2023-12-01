@@ -28,7 +28,7 @@ function validarFormulario(post, fallo = {}) {
         fallo.message = "Complete el campo obligatorio de Mano";
         return false;
     }
-    if (post.kilometros === "" || post.kilometros === "Selecciona una opción") {
+    if (post.kilometros === "") {
         fallo.message = "Complete el campo obligatorio de Kilometros";
         return false;
     }
