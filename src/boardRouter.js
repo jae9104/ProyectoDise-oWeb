@@ -58,8 +58,8 @@ function validarFormulario(post, fallo = {}) {
         fallo.message = "El precio no puede ser negativo";
         return false;
     }
-    if (parseInt(post.caballos) < 0 || parseInt(post.caballos) > 1200) {
-        fallo.message = "Los caballos deben estar entre 0 y 1200";
+    if (parseInt(post.caballos) < 0 || parseInt(post.caballos) > 5000) {
+        fallo.message = "Los caballos deben estar entre 0 y 5000";
         return false;
     }
 
@@ -68,19 +68,19 @@ function validarFormulario(post, fallo = {}) {
     return true;
 }
 /*Añade un post y define sus componentes */
-router.post('/pagNewElem', (req, res) => {
+router.post('/post/edit', (req, res) => {
     let { nombre, precio, mano, kilometros, combustible, transmision, caballos, descripcion, imagen } = req.body;
 
     // Luego, puedes pasar las nuevas propiedades al objeto post
     let fallo = {};
     let ok = validarFormulario(req.body, fallo);
     if (ok) {
-        boardService.addPost({ nombre, precio, mano, kilometros, combustible, transmision, caballos, descripcion, imagen });
+        boardService.addPost({ nombre, precio, mano, kilometros, combustible, transmision, caballos, descripcion, imagen }, req.body.id);
         res.redirect('/');//nos redirige a la pagina index
     }
     else {
         boardService.addFallo(fallo);
-        res.render('pagNewElem', { fallos: boardService.lastFallo(), FormData: req.body });
+        res.render('pagNewElem', { fallos: boardService.lastFallo(), FormData: req.body});
         boardService.inicializarFallos(); //reinicializa el array de fallos
     }
 });
@@ -100,10 +100,11 @@ router.get('/post/:id/delete', (req, res) => {
     res.redirect('/');//nos redirige a la pagina index 
 });
 
+
 ///editar un post
 router.get('/post/:id/edit', (req, res) => {
 
-    res.render('pagNewElem', { post: boardService.getPostDetails(req.params.id) });
+    res.render('pagNewElem', { FormData: boardService.getPostDetails(req.params.id) });
 });
 
 //////////////sección opiniones//////////////
