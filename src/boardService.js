@@ -28,10 +28,27 @@ export function inicializarFallos() {
     fallos = [];
 }
 
-export function addPost(post) {
-    let id = nextId++;
-    post.id = id.toString();
-    posts.set(post.id, post);
+export function addPost(post,idAux) {
+    ///En este apartado se comprueba que el post a crear existe o no, si no existe se le añade con el nuevo id. Pero, si existe se modifica dato a dato el post y se repostea con los nuevos datos///
+    let postEncontrado = posts.get(idAux);
+    if (postEncontrado) {
+        postEncontrado.nombre = post.nombre;
+        postEncontrado.precio = post.precio;
+        postEncontrado.mano = post.mano;
+        postEncontrado.kilometros = post.kilometros;
+        postEncontrado.combustible = post.combustible;
+        postEncontrado.transmision = post.transmision;
+        postEncontrado.caballos = post.caballos;
+        postEncontrado.descripcion = post.descripcion;
+        postEncontrado.imagen = post.imagen;
+        postEncontrado.id = idAux;
+        posts.set(idAux, postEncontrado);
+    }
+    else {
+        let id = nextId++;
+        post.id = id.toString();
+        posts.set(post.id, post);
+    }
 }
 
 export function deletePost(id){
@@ -53,7 +70,7 @@ export function getPosts() {
     }));
 }
 
-// Agregar una nueva función getPostDetails en boardService.js
+
 export function getPostDetails(id) {
     const post = posts.get(id);
     if (post) {
