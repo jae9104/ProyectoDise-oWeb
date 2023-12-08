@@ -81,8 +81,8 @@ router.post('/post/edit', (req, res) => {
     let fallo = {};
     let ok = validarFormulario(req.body, fallo);
     if (ok) {
-        boardService.addPost({ nombre, precio, mano, kilometros, combustible, transmision, caballos, descripcion, imagen }, req.body.id);
-        res.redirect('/');//nos redirige a la pagina index
+        const postId = boardService.addPost({ nombre, precio, mano, kilometros, combustible, transmision, caballos, descripcion, imagen }, req.body.id);
+        res.redirect(`/post/${postId}`);//nos redirige a la pagina index
     }
     else {
         res.render('pagNewElem', { fallos: boardService.lastFallo(), FormData: req.body});
