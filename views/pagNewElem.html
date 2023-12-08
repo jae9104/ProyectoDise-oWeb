@@ -52,7 +52,8 @@
                         <h6>Rellena el siguiente formulario y te garantizamos la venta de tu coche </h6>
                     </div>
                     <div class="container-fluid">
-                        <form class="row" action="/pagNewElem" method="post" id="tuFormulario">
+                        <form class="row" action="/post/edit" method="post" id="tuFormulario">
+                            <input type="hidden" name="id" value="{{FormData.id}}">
                             {{#fallos}}
                             <div class="col-md-12">
                                 <div class="alert alert-danger" role="alert">
@@ -139,3 +140,4 @@
 </body>
 
 </html>
+
