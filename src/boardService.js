@@ -1,7 +1,7 @@
 const posts = new Map();
 const opiniones = {};
 let nextId = 0;
-let fallos = new Array;
+let fallos = [];
 
 addPost({ nombre: "Audi R8", precio: "250000", mano: "1º mano", kilometros: "37892", combustible: "Gasolina", transmision: "Manual", caballos: "400", descripcion: "Mejor coche para curvas", imagen: "https://cdn.autobild.es/sites/navi.axelspringer.es/public/media/image/2022/10/audi-r8-v10-gt-2023-2831875.jpg"  });
 addPost({ nombre: "BMW M3", precio: "180000", mano: "2º mano", kilometros: "112554", combustible: "Diesel", transmision: "Manual", caballos: "2500", descripcion: "Rapidisimo", imagen: "https://hips.hearstapps.com/hmg-prod/images/bmw-m3-cs-2024-1674639702.jpg"  });
@@ -13,8 +13,29 @@ addPost({ nombre: "Mercedes Clase A", precio: "64000", mano: "1º mano", kilomet
 addPost({ nombre: "Lamborghini Veneno", precio: "5400000", mano: "2º mano", kilometros: "89543", combustible: "Diesel", transmision: "Automatico", caballos: "2500", descripcion: "Coche de ocasion para disfrutar en pareja", imagen: "https://imagenes.km77.com/fotos/bbtcontent/clippingnew/KM7KPH20131020_0001/medium.jpg"  });
 
 
-agregarOpinion(1,{nombre: "Jorge", email: "jorge@gmail.com", valoracion: "8", comentario: "Brutal coche, con estética de locos"});
-agregarOpinion(1,{nombre: "Ivan", email: "ivan@gmail.com", valoracion: "3", comentario: "Un poco flojo el acabado interior"})
+agregarOpinion(1,{nombre: "Jorge", email: "jorge@gmail.com", valoracion: "10", comentario: "Brutal coche, con estética de locos"});
+agregarOpinion(1,{nombre: "Ivan", email: "ivan@gmail.com", valoracion: "1", comentario: "Un poco flojo el acabado interior"})
+
+agregarOpinion(2,{nombre: "Jorge", email: "jorge@gmail.com", valoracion: "9", comentario: "Bonito pero algo mejorable"});
+agregarOpinion(2,{nombre: "Ivan", email: "ivan@gmail.com", valoracion: "2", comentario: "Peor interior imposible"})
+
+agregarOpinion(3,{nombre: "Jorge", email: "jorge@gmail.com", valoracion: "8", comentario: "Perfecto para calle pero algo rapido"});
+agregarOpinion(3,{nombre: "Ivan", email: "ivan@gmail.com", valoracion: "3", comentario: "Horrible para carretera"})
+
+agregarOpinion(4,{nombre: "Jorge", email: "jorge@gmail.com", valoracion: "7", comentario: "Es mi primer coche, aconsejable para principiantes"});
+agregarOpinion(4,{nombre: "Ivan", email: "ivan@gmail.com", valoracion: "4", comentario: "Muy decepcionante por el precio"})
+
+agregarOpinion(5,{nombre: "Jorge", email: "jorge@gmail.com", valoracion: "6", comentario: "Me esperaba algo mas pero es bonito"});
+agregarOpinion(5,{nombre: "Ivan", email: "ivan@gmail.com", valoracion: "5", comentario: "Ni fu ni fa"})
+
+agregarOpinion(6,{nombre: "Ivan", email: "ivan@gmail.com", valoracion: "6", comentario: "Mejorable para lo que cuesta"})
+agregarOpinion(6,{nombre: "Jorge", email: "jorge@gmail.com", valoracion: "5", comentario: "Muy desgastado"});
+
+agregarOpinion(7,{nombre: "Ivan", email: "ivan@gmail.com", valoracion: "7", comentario: "Precioso pero caro"})
+agregarOpinion(7,{nombre: "Jorge", email: "jorge@gmail.com", valoracion: "4", comentario: "Caro y no sirve ni para campo"});
+
+agregarOpinion(0,{nombre: "Ivan", email: "ivan@gmail.com", valoracion: "8", comentario: "Brutal coche, con estética de locos"})
+agregarOpinion(0,{nombre: "Jorge", email: "jorge@gmail.com", valoracion: "3", comentario: "Muy mejorable"});
 
 export function addFallo(fallo){
     fallos.push(fallo);//añado al array el fallo
