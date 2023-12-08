@@ -12,60 +12,66 @@ router.get('/', (req, res) => {
 
 function validarFormulario(post, fallo = {}) {
     // Validación básica
+    let ok = true;
+    fallo.messages = []
     if (post.nombre === "") {
-        fallo.message = "Complete el campo obligatorio de Marca y modelo del coche";
-        return false;
+        fallo.messages.push("Complete el campo obligatorio de Marca y modelo del coche");
+        ok = false;
     }
     if (post.imagen === "") {
-        fallo.message = "Complete el campo obligatorio de Dirección de la imagen";
-        return false;
+        fallo.messages.push("Complete el campo obligatorio de Dirección de la imagen");
+        ok = false;
     }
     if (post.precio === "") {
-        fallo.message = "Complete el campo obligatorio de Precio estimado";
-        return false;
+        fallo.messages.push("Complete el campo obligatorio de Precio estimado");
+        ok = false;
     }
-    if (post.mano === "" || post.mano === "Selecciona una opción") {
-        fallo.message = "Complete el campo obligatorio de Mano";
-        return false;
+    if (post.mano === "") {
+        fallo.messages.push("Complete el campo obligatorio de Mano");
+        ok = false;
     }
     if (post.kilometros === "") {
-        fallo.message = "Complete el campo obligatorio de Kilometros";
-        return false;
+        fallo.messages.push("Complete el campo obligatorio de Kilometros");
+        ok = false;
     }
-    if (post.combustible === "" || post.combustible === "Selecciona una opción") {
-        fallo.message = "Complete el campo obligatorio de Combustible";
-        return false;
+    if (post.combustible === "") {
+        fallo.messages.push("Complete el campo obligatorio de Combustible");
+        ok = false;
     }
-    if (post.transmision === "" || post.transmision === "Selecciona una opción") {
-        fallo.message = "Complete el campo obligatorio de Transmision";
-        return false;
+    if (post.transmision === "") {
+        fallo.messages.push("Complete el campo obligatorio de Transmision");
+        ok = false;
     }
     if (post.caballos === "") {
-        fallo.message = "Complete el campo obligatorio de Caballos de potencia";
-        return false;
+        fallo.messages.push("Complete el campo obligatorio de Caballos de potencia");
+        ok = false;
     }
     if (post.descripcion === "") {
-        fallo.message = "Complete el campo obligatorio de Descripcion y/o defectos";
-        return false;
+        fallo.messages.push("Complete el campo obligatorio de Descripcion y/o defectos");
+        ok = false;
     }
 
     // Validacion para valores dentro de los rangos
     if (parseInt(post.kilometros) < 0) {
-        fallo.message = "Los kilometros no puede ser negativos";
-        return false;
+        fallo.messages.push("Los kilometros no puede ser negativos");
+        ok = false;
     }
     if (parseInt(post.precio) < 0) {
-        fallo.message = "El precio no puede ser negativo";
-        return false;
+        fallo.messages.push("El precio no puede ser negativo");
+        ok = false;
     }
     if (parseInt(post.caballos) < 0 || parseInt(post.caballos) > 5000) {
-        fallo.message = "Los caballos deben estar entre 0 y 5000";
-        return false;
+        fallo.messages.push("Los caballos deben estar entre 0 y 5000");
+        ok = false;
+    }
+
+    if (!ok) {
+        boardService.addFallo(fallo);
     }
 
 
     // Si todas las validaciones pasan, el formulario se envía
-    return true;
+    return ok;
 }
 /*Añade un post y define sus componentes */
 router.post('/post/edit', (req, res) => {
@@ -79,7 +85,6 @@ router.post('/post/edit', (req, res) => {
         res.redirect('/');//nos redirige a la pagina index
     }
     else {
-        boardService.addFallo(fallo);
         res.render('pagNewElem', { fallos: boardService.lastFallo(), FormData: req.body});
         boardService.inicializarFallos(); //reinicializa el array de fallos
     }
