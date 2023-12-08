@@ -57,7 +57,9 @@
                             {{#fallos}}
                             <div class="col-md-12">
                                 <div class="alert alert-danger" role="alert">
-                                    {{message}}
+                                    {{#messages}}
+                                    {{.}}<br>
+                                    {{/messages}}
                                 </div>
                             </div>
                             {{/fallos}}
@@ -140,4 +142,3 @@
 </body>
 
 </html>
-
