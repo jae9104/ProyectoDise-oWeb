@@ -1,13 +1,27 @@
 import express from 'express';
 import * as boardService from './boardService.js';
+import { getCoches } from './boardService.js';
 
 const router = express.Router();
 
 /*Muestra todas las publicaciones */
 router.get('/', (req, res) => {
-    res.render('index', {
-        posts: boardService.getPosts()
-    });
+
+    const posts = getCoches(0,4);
+
+    res.render('index', { posts });
+});
+
+//////////////Ajax//////////////
+
+router.get('/coches', (req,res) => {
+
+    const from = parseInt(req.query.from);
+    const to = parseInt(req.query.to);
+
+    const posts = getCoches(from,to);
+
+    res.render('coches', { posts  });
 });
 
 function validarFormulario(post, fallo = {}) {
@@ -121,8 +135,6 @@ router.post('/post/:id', (req, res) => {
     const opiniones = boardService.obtenerOpiniones(id);
     res.render('pagSecundaria', { opiniones, post: boardService.getPostDetails(id) });
 });
-
-
 
 
 
