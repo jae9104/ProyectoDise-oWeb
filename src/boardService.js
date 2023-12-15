@@ -130,3 +130,14 @@ export function agregarOpinion(id, opinion) {
 export function obtenerOpiniones(idpag) {
     return opiniones[idpag] || [];
 }
+
+///////////////////Ajax///////////////////////
+
+export function getCoches(from, to) {
+    let values = [...posts.values()];
+    if (from !== undefined) {
+        return values.slice(from, to);
+    } else {
+        return values;
+    }
+}
