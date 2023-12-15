@@ -13,13 +13,19 @@ async function loadMore() {
         const cochesDiv = document.getElementById("coches");
 
         cochesDiv.innerHTML += newCoches;
+        
+        loadMoreRequests++;
 
-        if (newCoches.trim() === '') {
+        // Verificar si los siguientes 4 coches están vacíos
+        const nextFrom = (loadMoreRequests + 1) * NUM_RESULTS;
+        const nextTo = nextFrom + NUM_RESULTS;
+
+        const nextResponse = await fetch(`/coches?from=${nextFrom}&to=${nextTo}`);
+        const nextCochesHTML = await nextResponse.text();
+
+        if (nextCochesHTML.trim() === '') {
             faltanAun = false;
             document.getElementById("CargarMas").style.display = "none";
         }
-
-        loadMoreRequests++;
-
     }
 }
