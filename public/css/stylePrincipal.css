@@ -118,3 +118,47 @@ a{/*texto del boton*/
 a:hover{/*texto del link cuando pasas el cursor por encima*/
     color:white;
 }/*Termina la parte de las imagenes, nombres y pagina de nuevo elemento*/
+
+/*Empieza la parte del carrito de la compra*/
+#compra{
+    background-color: #87CEEB;
+    position: fixed;
+    top: 0;
+    right: 0;
+    width: 31%; 
+    height: 100%; 
+    padding: 20px;
+    box-shadow: -2px 0 5px rgba(0, 0, 0, 0.1); /* sombra para un aspecto visual */
+    z-index: 3; /* que este por encima de los posts */
+    display: none;
+    /**/
+    max-height: 100%; /* Ajusta la altura máxima según tus necesidades */
+    overflow-y: auto;
+    border: 1px solid #ccc; /* Borde para indicar el límite del contenedor */
+    padding: 10px; /* Espaciado interno para que no esté pegado al borde */
+}
+
+#compra h5{
+    color: black;
+}
+
+#compra h3{
+    color: black;
+}
+
+#compra .textoCompra{
+    margin-top: 80px;
+}
+
+/* Oculta el carrito al principio */
+#compra.mostrar {
+    display: block;
+}
+
+.texto-agrandable2 {
+    font-size: 16px; /* Tamaño al que esta la imagen normal*/
+    transition: transform 0.2s; /* cuanto tarda en hacer la transicion */
+}
+.texto-agrandable2:hover {
+    transform: scale(1.2); /* Aumentar el tamaño al pasar el cursor por encima al 120% */
+}
