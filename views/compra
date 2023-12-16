@@ -1,0 +1,18 @@
+<h3 class="textoCompra"><strong>Carrito de la compra</strong></h3>
+
+{{#posts}}
+<figure class="figure">
+  <a href="/post/{{id}}">
+    <img src="{{imagen}}" width="175px" class="texto-agrandable2" class="figure-img img-fluid rounded"
+      alt="{{nombre}}"></a>
+  <figcaption class="figure-caption" style="text-align: center">
+    <h5><strong>{{nombre}}</strong></h5>
+  </figcaption>
+</figure>
+{{/posts}}
+<div class="d-flex">
+  <button class="btn btn-success" onclick='eliminarTodos()'>Comprar por {{precioFinal}}</button>
+</div>
+<div class="d-flex">
+  <button class="btn btn-danger boton" onclick='cerrarCarrito()'>Cerrar</button>
+</div>
