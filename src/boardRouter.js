@@ -7,21 +7,21 @@ const router = express.Router();
 /*Muestra todas las publicaciones */
 router.get('/', (req, res) => {
 
-    const posts = getCoches(0,4);
+    const posts = getCoches(0, 4);
 
     res.render('index', { posts });
 });
 
 //////////////Ajax//////////////
 
-router.get('/coches', (req,res) => {
+router.get('/coches', (req, res) => {
 
     const from = parseInt(req.query.from);
     const to = parseInt(req.query.to);
 
-    const posts = getCoches(from,to);
+    const posts = getCoches(from, to);
 
-    res.render('coches', { posts  });
+    res.render('coches', { posts });
 });
 
 function validarFormulario(post, fallo = {}) {
@@ -89,17 +89,17 @@ function validarFormulario(post, fallo = {}) {
 }
 /*Añade un post y define sus componentes */
 router.post('/post/edit', (req, res) => {
-    let { nombre, precio, mano, kilometros, combustible, transmision, caballos, descripcion, imagen } = req.body;
+    let { nombre, precio, mano, kilometros, combustible, transmision, caballos, descripcion, imagen, compra } = req.body;
 
     // Luego, puedes pasar las nuevas propiedades al objeto post
     let fallo = {};
     let ok = validarFormulario(req.body, fallo);
     if (ok) {
-        const postId = boardService.addPost({ nombre, precio, mano, kilometros, combustible, transmision, caballos, descripcion, imagen }, req.body.id);
+        const postId = boardService.addPost({ nombre, precio, mano, kilometros, combustible, transmision, caballos, descripcion, imagen, compra }, req.body.id);
         res.redirect(`/post/${postId}`);//nos redirige a la pagina index
     }
     else {
-        res.render('pagNewElem', { fallos: boardService.lastFallo(), FormData: req.body});
+        res.render('pagNewElem', { fallos: boardService.lastFallo(), FormData: req.body });
         boardService.inicializarFallos(); //reinicializa el array de fallos
     }
 });
@@ -108,7 +108,7 @@ router.post('/post/edit', (req, res) => {
 router.get('/post/:id', (req, res) => {
     let id = req.params.id
     const postDetails = boardService.getPostDetails(id);
-    res.render('pagSecundaria', { post: postDetails, opiniones: boardService.obtenerOpiniones(id) });
+    res.render('pagSecundaria', { post: postDetails, opiniones: boardService.obtenerOpiniones(id), compra: postDetails.compra });
 });
 
 /* Elimina una publicación específica en función de su identificador */
@@ -136,6 +136,32 @@ router.post('/post/:id', (req, res) => {
     res.render('pagSecundaria', { opiniones, post: boardService.getPostDetails(id) });
 });
 
+//////////////carrito de la compra//////////////
+router.get('/addToCart', (req, res) => {
+    const postId = req.query.postId;
 
+    boardService.ModificarCompra(postId);//modifico compra a true
+    const coche = boardService.getPostDetails(postId);
+    boardService.agragarAlCarrito(coche);
 
+    res.sendStatus(200);//indica que la operacion salio bien
+});
+
+router.get('/compra', (req, res) => {
+
+    const posts = boardService.getCompra();
+    const precioFinal = boardService.allPrecio();
+
+    if (precioFinal != 0) {
+        res.render('compra', { posts, precioFinal });
+    }
+    else {
+        res.render('error');
+    }
+});
+
+router.get('/deleteCompra', (req, res) => {
+    boardService.deleteAll();
+    res.render('index');
+});  
 export default router;
