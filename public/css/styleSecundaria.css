@@ -40,7 +40,7 @@
     font-size: 15px; /* Reduce el tamaño de fuente de la tabla*/
 }
 
-#boton{
+.boton{
     margin-top: 20px; /* Margen superior para el boton */
     margin-right: 10px; /* Margen derecho para el boton */
 }
@@ -141,4 +141,3 @@ a{
 a:hover{/*texto del link cuando pasas el cursor por encima*/
     color:white;
 }
-
