@@ -15,7 +15,7 @@ async function loadMore() {
     loadMoreRequests++;
 
     // Verificar si los siguientes 4 coches están vacíos
-    const nextFrom = (loadMoreRequests + 1) * NUM_RESULTS;
+    const nextFrom = from + NUM_RESULTS;
     const nextTo = nextFrom + NUM_RESULTS;
 
     const nextResponse = await fetch(`/coches?from=${nextFrom}&to=${nextTo}`);
@@ -25,4 +25,32 @@ async function loadMore() {
         document.getElementById("CargarMas").style.display = "none";
     }
 
+}
+
+async function loadBudget() {
+    const response = await fetch("/compra");
+    const allCompras = await response.text();
+
+    const comprasDiv = document.getElementById("compra");
+
+    comprasDiv.innerHTML = allCompras;
+
+    comprasDiv.classList.add("mostrar");//le ponemos la clase para que el css lo ponga para mostrar
+
+    document.getElementById("mostrarCompra").style.display = "none";
+}
+
+async function eliminarTodos() {
+    const response = await fetch("/deleteCompra");
+    await response.text();
+
+    location.reload();
+}
+
+async function cerrarCarrito(){
+    const comprasDiv = document.getElementById("compra");
+
+    comprasDiv.classList.remove("mostrar");
+
+    document.getElementById("mostrarCompra").style.display = "block";
 }
