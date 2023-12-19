@@ -147,6 +147,14 @@ router.get('/addToCart', (req, res) => {
     res.sendStatus(200);//indica que la operacion salio bien
 });
 
+router.get('/deleteToCarrito', (req, res) => {
+    const postId = req.query.postId;
+
+    boardService.EliminarDeCompra(postId);//modifico compra a true
+
+    res.sendStatus(200);//indica que la operacion salio bien
+});
+
 router.get('/compra', (req, res) => {
 
     const posts = boardService.getCompra();
@@ -164,4 +172,6 @@ router.get('/deleteCompra', (req, res) => {
     boardService.deleteAll();
     res.render('index');
 });  
+
+
 export default router;
