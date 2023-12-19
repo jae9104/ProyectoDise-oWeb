@@ -57,6 +57,14 @@ export function agragarAlCarrito(coche) {
     compra.push(coche);
 }
 
+export function EliminarDeCompra(postId) {
+    compra = compra.filter(coche => coche.id !== postId);//crea una nueva compra con todos los elementos menos el del id
+    const post = posts.get(postId);
+    if (post) {
+        post.compra = false;//ponemos que compra esta a false
+    }
+}
+
 export function ModificarCompra(id) {
     const post = posts.get(id);
     if (post) {
@@ -64,7 +72,7 @@ export function ModificarCompra(id) {
     }
 }
 
-export function allPrecio(){
+export function allPrecio() {
     let num = 0;
     for (let i = 0; i < compra.length; i++) {
         num += parseInt(compra[i].precio);
@@ -72,7 +80,7 @@ export function allPrecio(){
     return num;
 }
 
-export function deleteAll(){
+export function deleteAll() {
     for (let i = 0; i < compra.length; i++) {
         posts.delete(compra[i].id);
     }
