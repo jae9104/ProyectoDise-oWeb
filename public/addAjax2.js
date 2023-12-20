@@ -1,4 +1,4 @@
-document.addEventListener("DOMContentLoaded", function() {
+document.addEventListener("DOMContentLoaded", function () {
     const AñadidoOK = document.getElementById("Añadido");//Ya esta añadido al carrito
     const carritoButton = document.getElementById("carrito");//Añadir al carrito
     const QuitarButton = document.getElementById("Quitarcarrito");//Quitar del carrito
@@ -22,7 +22,6 @@ async function addToCarrito(postId) {
         document.getElementById("carrito").style.display = "none";
         document.getElementById("Añadido").style.display = "block";
         document.getElementById("Quitarcarrito").style.display = "block";
-        cerrarCarrito();
         loadBudget();
     }
 }
@@ -34,7 +33,6 @@ async function deleteToCarrito(postId) {
         document.getElementById("carrito").style.display = "block";
         document.getElementById("Añadido").style.display = "none";
         document.getElementById("Quitarcarrito").style.display = "none";
-        cerrarCarrito();
         loadBudget();
     }
 }
@@ -54,12 +52,18 @@ async function loadBudget() {
 
 async function eliminarTodos() {
     const response = await fetch("/deleteCompra");
-    await response.text();
+    const mensajeOk = await response.text();
 
-    location.reload();
+    const ok = document.getElementById("compra");
+
+    ok.innerHTML = mensajeOk;
+
+    document.getElementById("carrito").style.display = "block";
+    document.getElementById("Añadido").style.display = "none";
+    document.getElementById("Quitarcarrito").style.display = "none";
 }
 
-async function cerrarCarrito(){
+async function cerrarCarrito() {
     const comprasDiv = document.getElementById("compra");
 
     comprasDiv.classList.remove("mostrar");
