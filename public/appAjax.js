@@ -42,9 +42,11 @@ async function loadBudget() {
 
 async function eliminarTodos() {
     const response = await fetch("/deleteCompra");
-    await response.text();
+    const mensajeOk = await response.text();
 
-    location.reload();
+    const ok = document.getElementById("compra");
+
+    ok.innerHTML = mensajeOk;
 }
 
 async function cerrarCarrito(){
