@@ -169,8 +169,9 @@ router.get('/compra', (req, res) => {
 });
 
 router.get('/deleteCompra', (req, res) => {
+    const precioFinal = boardService.allPrecio();
     boardService.deleteAll();
-    res.render('index');
+    res.render('ok', { precioFinal });
 });  
 
 
