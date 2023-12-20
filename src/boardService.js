@@ -65,6 +65,7 @@ export function EliminarDeCompra(postId) {
     }
 }
 
+
 export function ModificarCompra(id) {
     const post = posts.get(id);
     if (post) {
@@ -82,7 +83,10 @@ export function allPrecio() {
 
 export function deleteAll() {
     for (let i = 0; i < compra.length; i++) {
-        posts.delete(compra[i].id);
+        const post = posts.get(compra[i].id);
+        if (post) {
+            post.compra = false;
+        }
     }
     compra = [];
 }
