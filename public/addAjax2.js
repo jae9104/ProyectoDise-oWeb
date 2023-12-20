@@ -22,6 +22,8 @@ async function addToCarrito(postId) {
         document.getElementById("carrito").style.display = "none";
         document.getElementById("Añadido").style.display = "block";
         document.getElementById("Quitarcarrito").style.display = "block";
+        cerrarCarrito();
+        loadBudget();
     }
 }
 
@@ -32,5 +34,35 @@ async function deleteToCarrito(postId) {
         document.getElementById("carrito").style.display = "block";
         document.getElementById("Añadido").style.display = "none";
         document.getElementById("Quitarcarrito").style.display = "none";
+        cerrarCarrito();
+        loadBudget();
     }
+}
+
+async function loadBudget() {
+    const response = await fetch("/compra");
+    const allCompras = await response.text();
+
+    const comprasDiv = document.getElementById("compra");
+
+    comprasDiv.innerHTML = allCompras;
+
+    comprasDiv.classList.add("mostrar");//le ponemos la clase para que el css lo ponga para mostrar
+
+    document.getElementById("mostrarCompra").style.display = "none";
+}
+
+async function eliminarTodos() {
+    const response = await fetch("/deleteCompra");
+    await response.text();
+
+    location.reload();
+}
+
+async function cerrarCarrito(){
+    const comprasDiv = document.getElementById("compra");
+
+    comprasDiv.classList.remove("mostrar");
+
+    document.getElementById("mostrarCompra").style.display = "block";
 }
