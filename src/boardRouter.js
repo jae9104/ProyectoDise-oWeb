@@ -174,5 +174,15 @@ router.get('/deleteCompra', (req, res) => {
     res.render('ok', { precioFinal });
 });  
 
+///buscarCoches
+
+router.get("/buscarCoches", (req,res) => {
+    const searchTerm = req.query.searchTerm;
+    const posts = boardService.busquedaCoches(searchTerm);
+    
+    res.render('coches', { posts });
+})
+
 
 export default router;
+
