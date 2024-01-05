@@ -56,3 +56,35 @@ async function cerrarCarrito(){
 
     document.getElementById("mostrarCompra").style.display = "block";
 }
+
+////busqueda coches
+
+async function buscarCoches(){
+    const searchTerm = document.getElementById("searchInput").value;
+    
+    if (searchTerm.trim() != ""){
+        const response = await fetch(`/buscarCoches?searchTerm=${searchTerm}`);
+        const coches = await response.text();
+        
+        const cochesDiv = document.getElementById("coches");
+        cochesDiv.innerHTML = coches;
+        console.log("coches", coches);       
+
+        document.getElementById("CargarMas").style.display = "none";
+    }
+    else{
+        loadMoreRequests = 0;
+
+        const response = await fetch(`/coches?from=${0}&to=${4}`);
+        const newCoches = await response.text();
+
+        const cochesDiv = document.getElementById("coches");
+
+        cochesDiv.innerHTML = newCoches;
+        console.log("coches", coches);
+
+        document.getElementById("CargarMas").style.display = "block";
+
+    }
+}
+
