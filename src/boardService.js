@@ -202,3 +202,11 @@ export function getCoches(from, to) {
         return values;
     }
 }
+
+///busqueda en navbar
+
+export function busquedaCoches(searchTerm) {
+    const resultados = Array.from(posts.entries()).filter(([id, post]) => post.nombre.toLowerCase().includes(searchTerm.toLowerCase()));
+    
+    return resultados.map(([id, post]) => post);
+}
