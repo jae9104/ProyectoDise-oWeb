@@ -9,49 +9,79 @@
     <link type="text/css" rel="stylesheet" href="/css/stylenewelem.css" />
 
     <script>
-        document.addEventListener('DOMContentLoaded', function () {
-            // Agrega un evento al formulario para la validación antes del envío
-            document.getElementById('tuFormulario').addEventListener('submit', function (event) {
-                // Valida el campo de Titulo
-                var nombreInput = document.getElementById('InputNombre');
-                if (nombreInput.value.trim() === '' || !/^[A-Z]/.test(nombreInput.value.trim()) ) {
-                    event.preventDefault(); // Evita que el formulario se envíe
-                    nombreInput.classList.add('is-invalid'); // Agrega estilo de Bootstrap para indicar un error
-                } else {
-                    nombreInput.classList.remove('is-invalid'); // Elimina el estilo de error si es válido
-                }
+        document.addEventListener('DOMContentLoaded', function () {   
 
-                // Valida el campo de Dirección de la imagen
-                var imagenInput = document.getElementById('InputImagen');
+            // Campo de Nombre
+            var nombreInput = document.getElementById('InputNombre');
+            nombreInput.addEventListener('input', validarNombre);
+            document.getElementById('InputNombre').addEventListener('blur', validarNombre);
+    
+            // Campo de Imagen
+            var imagenInput = document.getElementById('InputImagen');
+            imagenInput.addEventListener('input', validarImagen);
+            document.getElementById('InputImagen').addEventListener('blur', validarImagen);
+    
+            // Campo de Descripción
+            var descripcionInput = document.getElementById('floatingTextarea2');
+            descripcionInput.addEventListener('input', validarDescripcion);
+            document.getElementById('floatingTextarea2').addEventListener('blur', validarDescripcion);
+    
+            function validarNombre() {
+                var mensajeError = document.getElementById('mensajeErrorNombre');
+                if (nombreInput.value.trim() === '' || !/^[A-Z]/.test(nombreInput.value.trim())) {
+                    nombreInput.classList.add('is-invalid');
+                    mensajeError.textContent = 'El nombre debe comenzar con una letra mayúscula.';
+                } else {
+                    nombreInput.classList.remove('is-invalid');
+                    mensajeError.textContent = '';
+                }
+            }
+    
+            function validarImagen() {
+                var mensajeError = document.getElementById('mensajeErrorImagen');
                 if (imagenInput.value.trim() === '' || !isValidURL(imagenInput.value.trim())) {
-                    event.preventDefault();
                     imagenInput.classList.add('is-invalid');
+                    mensajeError.textContent = 'La URL de la imagen no es válida.';
                 } else {
                     imagenInput.classList.remove('is-invalid');
+                    mensajeError.textContent = '';
                 }
-
-                // Valida el campo de Descripción
-                var descripcionInput = document.getElementById('floatingTextarea2');
+            }
+    
+            function validarDescripcion() {
+                var mensajeError = document.getElementById('mensajeErrorDescripcion');
                 if (descripcionInput.value.trim() === '' || descripcionInput.value.trim().length < 50 || descripcionInput.value.trim().length > 500) {
-                    event.preventDefault();
                     descripcionInput.classList.add('is-invalid');
+                    mensajeError.textContent = 'La descripción debe tener entre 50 y 500 caracteres.';
+                    
                 } else {
                     descripcionInput.classList.remove('is-invalid');
+                    mensajeError.textContent = '';
                 }
+            }  
+            
+            // Evita el envío del formulario
+            document.getElementById('tuFormulario').addEventListener('submit', function (event) {
+                validarNombre();
+                validarImagen();
+                validarDescripcion();
 
+                if (nombreInput.classList.contains('is-invalid') || imagenInput.classList.contains('is-invalid') || descripcionInput.classList.contains('is-invalid')) {
+                    event.preventDefault();
+                }
             });
-        });
-
-        function isValidURL(url) {
-            try {
-                new URL (url);
-                return true;
-            } catch (err){
-                return false;
+            
+            // Función que verifica la URL
+            function isValidURL(url) {
+                try {
+                    new URL(url);
+                    return true;
+                } catch (err) {
+                    return false;
+                }
             }
-        }
-        
-    </script>
+        });
+    </script>    
 </head>
 
 
@@ -113,12 +143,14 @@
                                     coche</label>
                                 <input type="text" class="form-control" id="InputNombre"
                                     placeholder="Ejemplo: Nissan GTR" name='nombre' value="{{FormData.nombre}}">
+                                <div id="mensajeErrorNombre" class="invalid-feedback"></div>    
                             </div>
                             <div class="col-md-12">
                                 <label for="InputImagen" class="form-label">Dirección de la
                                     imagen</label>
                                 <input type="text" class="form-control" id="InputImagen" name='imagen'
                                     value="{{FormData.imagen}}">
+                                <div id="mensajeErrorImagen" class="invalid-feedback"></div>  
                             </div>
                             <div class="col-md-4">
                                 <label for="cantidadPrecio" style="margin-bottom: 7px">Precio estimado</label>
@@ -170,6 +202,7 @@
                                 <textarea class="form-control" id="floatingTextarea2"
                                     style="height: 100px; margin-bottom: 15px"
                                     name='descripcion'>{{FormData.descripcion}}</textarea>
+                                    <div id="mensajeErrorDescripcion" class="invalid-feedback"></div>      
                             </div>
                             <div class="col-md-2">
                                 <button type="submit" class="btn btn-success">Guardar</button>
@@ -187,3 +220,4 @@
 </body>
 
 </html>
+
