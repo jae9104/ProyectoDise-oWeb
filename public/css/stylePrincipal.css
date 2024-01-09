@@ -121,7 +121,8 @@ a:hover{/*texto del link cuando pasas el cursor por encima*/
 
 /*Empieza la parte del carrito de la compra*/
 #compra{
-    background-color: #87CEEB;
+    background-color: black;
+    border-left: 5px solid rgb(255, 0, 0);
     position: fixed;
     top: 0;
     right: 0;
@@ -134,16 +135,15 @@ a:hover{/*texto del link cuando pasas el cursor por encima*/
     /**/
     max-height: 100%; /* Ajusta la altura máxima según tus necesidades */
     overflow-y: auto;
-    border: 1px solid #ccc; /* Borde para indicar el límite del contenedor */
     padding: 10px; /* Espaciado interno para que no esté pegado al borde */
 }
 
 #compra h5{
-    color: black;
+    color: white;
 }
 
 #compra h3{
-    color: black;
+    color: white;
 }
 
 #compra .textoCompra{
