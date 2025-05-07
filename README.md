@@ -11,7 +11,7 @@ npm install
 ```
 - Iniciar el servidor en local
 ```bash
-npm start
+node src/app.js
 ```
 -Entrar en un navegador y buscar
 ```bash
